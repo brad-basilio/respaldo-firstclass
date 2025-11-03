@@ -49,6 +49,7 @@ use App\Http\Controllers\Admin\FaqController as AdminFaqController;
 use App\Http\Controllers\Admin\RepositoryController as AdminRepositoryController;
 use App\Http\Controllers\Admin\SaleStatusController as AdminSaleStatusController;
 use App\Http\Controllers\Admin\ComplaintController as AdminComplaintController;
+use App\Http\Controllers\Admin\LockerRequestController as AdminLockerRequestController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\ClientController as AdminClientController;
 use App\Http\Controllers\Admin\JobApplicationController as AdminJobApplicationController;
@@ -133,6 +134,7 @@ Route::middleware(['can:Admin', 'auth'])->prefix('admin')->group(function () {
     Route::get('/prices', [AdminDeliveryPriceController::class, 'reactView'])->name('Admin/DeliveryPricesType.jsx');
     Route::get('/stores', [AdminStoreController::class, 'reactView'])->name('Admin/Stores.jsx');
     Route::get('/messages', [AdminSubscriptionController::class, 'reactView'])->name('Admin/Messages.jsx');
+    Route::get('/locker-requests', [AdminLockerRequestController::class, 'reactView'])->name('Admin/LockerRequests.jsx');
     Route::get('/complaints', [AdminComplaintController::class, 'reactView'])->name('Admin/Complaints.jsx');
     Route::get('/subscriptions', [AdminSubscriptionController::class, 'reactView'])->name('Admin/Subscriptions.jsx');
 

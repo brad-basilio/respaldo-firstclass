@@ -1,0 +1,1 @@
+var o=Object.defineProperty;var r=(e,s,t)=>s in e?o(e,s,{enumerable:!0,configurable:!0,writable:!0,value:t}):e[s]=t;var a=(e,s,t)=>r(e,typeof s!="symbol"?s+"":s,t);import{B as c}from"./BasicRest-BML1C-ua.js";class l extends c{constructor(){super(...arguments);a(this,"path","locker-requests");a(this,"is_use_notify",!1)}}export{l as L};

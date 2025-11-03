@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AboutusController as AdminAboutusController;
 use App\Http\Controllers\Admin\IndicatorController as AdminIndicatorController;
 use App\Http\Controllers\Admin\MessageController as AdminMessageController;
+use App\Http\Controllers\Admin\LockerRequestController as AdminLockerRequestController;
 use App\Http\Controllers\Admin\ComplaintController as AdminComplaintController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\TestimonyController as AdminTestimonyController;
@@ -78,6 +79,7 @@ use App\Http\Controllers\TypeDeliveryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ItemImportController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\LockerRequestController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\MercadoPagoController;
 use App\Http\Controllers\OpenPayController;
@@ -180,6 +182,7 @@ Route::post('/items/paginate', [ItemController::class, 'paginate']);
 Route::post('/items/convert-slugs', [ItemController::class, 'convertSlugsToIds']);
 
 Route::post('/messages', [MessageController::class, 'save']);
+Route::post('/locker-requests', [LockerRequestController::class, 'save']);
 Route::post('/subscriptions', [SubscriptionController::class, 'save']);
 
 Route::get('/cover/{uuid}', [CoverController::class, 'full']);
@@ -322,6 +325,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/messages/status', [AdminMessageController::class, 'status']);
     Route::patch('/messages/{field}', [AdminMessageController::class, 'boolean']);
     Route::delete('/messages/{id}', [AdminMessageController::class, 'delete']);
+
+    Route::post('/locker-requests', [AdminLockerRequestController::class, 'save']);
+    Route::post('/locker-requests/paginate', [AdminLockerRequestController::class, 'paginate']);
+    Route::patch('/locker-requests/status', [AdminLockerRequestController::class, 'status']);
+    Route::patch('/locker-requests/{field}', [AdminLockerRequestController::class, 'boolean']);
+    Route::delete('/locker-requests/{id}', [AdminLockerRequestController::class, 'delete']);
 
     Route::post('/complaints', [AdminComplaintController::class, 'save']);
     Route::post('/complaints/paginate', [AdminComplaintController::class, 'paginate']);

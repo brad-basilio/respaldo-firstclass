@@ -227,7 +227,7 @@ const FooterFirstClass = ({ data, socials = [], generals = [] }) => {
                         <h3 className="text-lg font-semibold mb-4">Contacto</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <Mail className="h-5 w-5 customtext-primary mr-2 mt-0.5 flex-shrink-0" />
+                                <Mail className="min-h-5 min-w-5 customtext-primary mr-2 mt-0.5 flex-shrink-0" />
                                 <div>
                                     {emailList.map((email, index) => (
                                         <p key={index} className="text-gray-400">{email}</p>
@@ -235,13 +235,13 @@ const FooterFirstClass = ({ data, socials = [], generals = [] }) => {
                                 </div>
                             </li>
                             <li className="flex items-start">
-                                <Phone className="h-5 w-5 customtext-primary mr-2 mt-0.5" />
+                                <Phone className="min-h-5 min-w-5 customtext-primary mr-2 mt-0.5" />
                                 <div>
                                     <p className="text-gray-400">Perú: {supportPhone}</p>
                                 </div>
                             </li>
                             <li className="flex items-start">
-                                <MapPin className="h-5 w-5 customtext-primary mr-2 mt-0.5" />
+                                <MapPin className="min-h-5 min-w-5 customtext-primary mr-2 mt-0.5" />
                                 <p className="text-gray-400">{address}</p>
                             </li>
                         </ul>

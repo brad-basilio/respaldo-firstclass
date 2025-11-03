@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Breadcrumbs from './Breadcrumbs';
 import BrandsCarousel from './BrandsCarousel';
+import LockerButton from './LockerButton';
 import { 
   MapPin, 
   Package, 
@@ -228,11 +229,11 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
                 data-animate
                 id="hero-buttons"
               >
-                <button className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
+                <LockerButton className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
                   <CheckCircle className="mr-3 h-6 w-6 text-green-500" />
                   Abrir mi casillero
                   <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                </button>
+                </LockerButton>
                 <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
                   <Play className="mr-3 h-6 w-6" />
                   Ver cómo funciona
@@ -504,11 +505,11 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
 
           {/* CTA Button */}
           <div className="text-center mt-16">
-            <button className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
+            <LockerButton className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
               <CheckCircle className="mr-3 h-6 w-6" />
               Abrir mi casillero
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-            </button>
+            </LockerButton>
           </div>
         </div>
       </section>
@@ -993,11 +994,11 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
+              <LockerButton className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
                 <CheckCircle className="mr-3 h-6 w-6 text-green-500" />
                 Abrir mi casillero gratis
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
+              </LockerButton>
               
               <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
                 <Mail className="mr-3 h-6 w-6" />
