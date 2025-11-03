@@ -28,6 +28,7 @@ import {
   Headphones,
   ShieldCheck
 } from 'lucide-react';
+import AdvisorButton from './AdvisorButton';
 
 const ImportacionCourier = ({ data, items, generals, cart, setCart, pages, isUser, contacts }) => {
     const [activeStep, setActiveStep] = useState(0);
@@ -314,15 +315,15 @@ const ImportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                                 data-animate
                                 id="hero-buttons"
                             >
-                                <button className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
+                                <a href='/tarifas' className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
                                     <Briefcase className="mr-3 h-6 w-6" />
                                     Cotizar importación
                                     <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                                </button>
-                                <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
+                                </a>
+                                <AdvisorButton className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
                                     <Mail className="mr-3 h-6 w-6" />
                                     Contactar asesor
-                                </button>
+                                </AdvisorButton>
                             </div>
                         </div>
 
@@ -613,11 +614,11 @@ const ImportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
 
                     {/* CTA Button */}
                     <div className="text-center mt-16">
-                        <button className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
+                        <AdvisorButton className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
                             <Briefcase className="mr-3 h-6 w-6" />
                             Solicitar cotización empresarial
                             <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                        </button>
+                        </AdvisorButton>
                     </div>
                 </div>
             </section>
@@ -767,10 +768,10 @@ const ImportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                         <p className="text-xl text-white/90 mb-6">
                             Consulta por nuestro servicio de importación marítima o aérea para cargas de mayor volumen
                         </p>
-                        <button className="bg-white hover:bg-gray-100 customtext-primary px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                        <AdvisorButton className="bg-white hover:bg-gray-100 customtext-primary px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center">
                             <Mail className="mr-2 h-5 w-5" />
                             Contactar especialista en carga
-                        </button>
+                        </AdvisorButton>
                     </div>
                 </div>
             </section>
@@ -791,16 +792,16 @@ const ImportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <button className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
+                        <a href='/tarifas' className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
                             <Briefcase className="mr-3 h-6 w-6" />
                             Solicitar cotización
                             <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                        </button>
-                        
-                        <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
+                        </a>
+
+                        <AdvisorButton className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
                             <Headphones className="mr-3 h-6 w-6" />
                             Hablar con ejecutivo
-                        </button>
+                        </AdvisorButton>
                     </div>
 
                     <p className="text-white/80 mt-6 text-lg">

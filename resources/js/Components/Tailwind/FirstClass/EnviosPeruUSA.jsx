@@ -19,6 +19,7 @@ import {
   Gift,
   Home
 } from 'lucide-react';
+import AdvisorButton from './AdvisorButton';
 
 const EnviosPeruUSA = ({ data, items, generals, cart, setCart, pages, isUser, contacts }) => {
     const [activeStep, setActiveStep] = useState(0);
@@ -188,7 +189,7 @@ const EnviosPeruUSA = ({ data, items, generals, cart, setCart, pages, isUser, co
                     <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-white/10 rounded-full animate-pulse delay-500"></div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         
                         {/* Left Content */}
@@ -266,12 +267,12 @@ const EnviosPeruUSA = ({ data, items, generals, cart, setCart, pages, isUser, co
                                 data-animate
                                 id="hero-buttons"
                             >
-                                <button className="bg-white hover:bg-gray-100 customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
+                                <a href='/tarifas' className="bg-white hover:bg-gray-100 customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
                                     <Package className="mr-3 h-6 w-6" />
                                     Cotizar envío
                                     <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                                </button>
-                                <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
+                                </a>
+                                <button className="!hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
                                     <Play className="mr-3 h-6 w-6" />
                                     Ver cómo funciona
                                 </button>
@@ -539,11 +540,11 @@ const EnviosPeruUSA = ({ data, items, generals, cart, setCart, pages, isUser, co
                     </div>
 
                     <div className="text-center mt-16">
-                        <button className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
+                        <a href='/tarifas' className="bg-primary max-w-max hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
                             <Package className="mr-3 h-6 w-6" />
                             Cotizar mi envío
                             <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -674,16 +675,16 @@ const EnviosPeruUSA = ({ data, items, generals, cart, setCart, pages, isUser, co
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <button className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
+                        <a href='/tarifas' className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
                             <Package className="mr-3 h-6 w-6" />
                             Cotizar envío ahora
                             <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                        </button>
+                        </a>
                         
-                        <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
+                        <AdvisorButton className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
                             <Mail className="mr-3 h-6 w-6" />
                             Contactar asesor
-                        </button>
+                        </AdvisorButton>
                     </div>
 
                     <p className="text-white/80 mt-6 text-lg">

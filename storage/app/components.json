@@ -4403,7 +4403,8 @@
                 },
                 "generals": [
                     "phone_contact",
-                    "email_contact"
+                    "email_contact",
+                    "opening_hours"
                 ]
             }
         ]

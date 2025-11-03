@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Menu, X, ChevronDown, User, Building, HelpCircle, MapPin, Globe, Truck, DollarSign, MessageCircle, FileText, UserCircle, LogIn } from 'lucide-react';
+import { Menu, X, ChevronDown, User, Building, HelpCircle, MapPin, Globe, Truck, DollarSign, MessageCircle, FileText, UserCircle, LogIn, Plane } from 'lucide-react';
 import Global from '../../../Utils/Global';
+import LockerButton from '../FirstClass/LockerButton';
 
 const HeaderFirstClass = ({
     data,
@@ -200,17 +201,17 @@ const HeaderFirstClass = ({
                         </nav>
 
                         {/* Account Section */}
-                        <div hidden className="flex items-center space-x-4 !hidden" >
+                        <div  className="flex items-center space-x-4 " >
                             {/* Account Buttons - Desktop */}
-                            <div className="hidden lg:flex items-center space-x-3">
-                                <button className="flex items-center text-gray-700 hover:customtext-primary transition-all duration-200 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 group">
+                            <div className=" lg:flex items-center space-x-3">
+                                <button className="!hidden flex items-center text-gray-700 hover:customtext-primary transition-all duration-200 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 group">
                                     <UserCircle className="h-5 w-5 mr-1 group-hover:scale-110 transition-transform duration-200" />
                                     <a href="/mi-cuenta">Mi cuenta</a>
                                 </button>
-                                <button className="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center group transform hover:scale-105">
-                                    <LogIn className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
+                                <LockerButton className="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center group transform hover:scale-105">
+                                    <Plane className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                                     Regístrate
-                                </button>
+                                </LockerButton>
                             </div>
 
                             {/* Mobile Menu Button */}
@@ -299,7 +300,7 @@ const HeaderFirstClass = ({
                                 </div>
                                 
                                 {/* Call to Action Section */}
-                                <div hidden className="mt-8 pt-6 border-t border-gray-200">
+                                <div  className="mt-8 pt-6 border-t border-gray-200">
                                     <div className="bg-primary rounded-xl p-6 text-white">
                                         <div className="flex flex-col md:flex-row items-center justify-between">
                                             <div className="mb-4 md:mb-0">
@@ -313,9 +314,9 @@ const HeaderFirstClass = ({
                                                 >
                                                     Comenzar ahora
                                                 </button>
-                                                <button className="border-2 border-white text-white hover:bg-white hover:customtext-primary px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+                                                <a href='/tarifas' className="border-2 border-white text-white hover:bg-white hover:customtext-primary px-6 py-3 rounded-lg font-semibold transition-all duration-200">
                                                     Ver tarifas
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

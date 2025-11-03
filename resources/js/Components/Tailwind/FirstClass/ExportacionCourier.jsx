@@ -30,8 +30,10 @@ import {
   Upload,
   BookOpen,
   CircleDollarSign,
-  Boxes
+  Boxes,
+  MessageCircleDashed
 } from 'lucide-react';
+import AdvisorButton from './AdvisorButton';
 
 const ExportacionCourier = ({ data, items, generals, cart, setCart, pages, isUser, contacts }) => {
     const [activeStep, setActiveStep] = useState(0);
@@ -249,7 +251,7 @@ const ExportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                     <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-white/10 rounded-full animate-pulse delay-500"></div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         
                         {/* Left Content */}
@@ -327,12 +329,12 @@ const ExportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                                 data-animate
                                 id="hero-buttons"
                             >
-                                <button className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
+                                <a href='/tarifas' className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center shadow-xl group">
                                     <Upload className="mr-3 h-6 w-6" />
                                     Cotizar exportación
                                     <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                                </button>
-                                <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
+                                </a>
+                                <button className="!hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
                                     <BookOpen className="mr-3 h-6 w-6" />
                                     Guía de exportación
                                 </button>
@@ -640,11 +642,11 @@ const ExportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
 
                 {/* CTA Button */}
                     <div className="text-center mt-16">
-                        <button className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
+                        <AdvisorButton  className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center mx-auto group">
                             <Upload className="mr-3 h-6 w-6" />
                             Iniciar mi primera exportación
                             <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                        </button>
+                        </AdvisorButton>
                     </div>
                 </div>
             </section>
@@ -841,10 +843,10 @@ const ExportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                         <p className="text-xl text-white/90 mb-6">
                             Descarga nuestra guía completa de exportación con todos los pasos y documentos necesarios
                         </p>
-                        <button className="bg-white hover:bg-gray-100 customtext-primary px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                            <BookOpen className="mr-2 h-5 w-5" />
-                            Descargar guía gratuita
-                        </button>
+                        <AdvisorButton className="bg-white hover:bg-gray-100 customtext-primary px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                            <MessageCircleDashed className="mr-2 h-5 w-5" />
+                           Habla con nuestros expertos
+                        </AdvisorButton>
                     </div>
                 </div>
             </section>
@@ -865,16 +867,16 @@ const ExportacionCourier = ({ data, items, generals, cart, setCart, pages, isUse
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-                        <button className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
+                        <a href='/tarifas' className="bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl flex items-center group">
                             <Upload className="mr-3 h-6 w-6" />
                             Cotizar mi exportación
                             <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-                        </button>
-                        
-                        <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
+                        </a>
+
+                        <AdvisorButton className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
                             <Headphones className="mr-3 h-6 w-6" />
                             Asesoría personalizada
-                        </button>
+                        </AdvisorButton>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

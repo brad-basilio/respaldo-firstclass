@@ -22,6 +22,7 @@ import {
   MessageCircle,
   FileText
 } from 'lucide-react';
+import AdvisorButton from './AdvisorButton';
 
 const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser, contacts }) => {
   const [activeStep, setActiveStep] = useState(0);
@@ -165,16 +166,16 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
           <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-white/10 rounded-full animate-pulse delay-500"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           {/* Breadcrumbs */}
           <div className="mb-8">
             <Breadcrumbs className="text-white" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-between">
             
             {/* Left Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left ">
               <div 
                 className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-medium mb-8 animate-fade-in"
                 data-animate
@@ -234,7 +235,7 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
                   Abrir mi casillero
                   <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
                 </LockerButton>
-                <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
+                <button  className="hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1  items-center justify-center group">
                   <Play className="mr-3 h-6 w-6" />
                   Ver cómo funciona
                 </button>
@@ -688,7 +689,7 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
             >
               <a
                 href="/tiendas-disponibles"
-                className="inline-flex items-center bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl group"
+                className="inline-flex !hidden items-center bg-primary hover:opacity-90 text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl group"
               >
                 <Globe className="mr-3 h-6 w-6" />
                 Explorar tiendas disponibles
@@ -916,12 +917,12 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
               Nuestros asesores especializados te ayudarán a verificar que tu envío cumpla con todas las normativas aduaneras de Perú.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center group">
+               <AdvisorButton className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center group">
                 <MessageCircle className="mr-3 h-6 w-6" />
                 Consultar con asesor
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              <button className="border-2 border-primary customtext-primary hover:opacity-90 hover:text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
+              </AdvisorButton>
+              <button className="!hidden border-2 border-primary customtext-primary hover:opacity-90 hover:text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
                 <FileText className="mr-3 h-6 w-6" />
                 Ver lista completa
               </button>
@@ -1000,10 +1001,10 @@ const CasilleroVirtual = ({ data, items, generals, cart, setCart, pages, isUser,
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
               </LockerButton>
               
-              <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
+              <AdvisorButton className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 flex items-center group">
                 <Mail className="mr-3 h-6 w-6" />
                 Contactar asesor
-              </button>
+              </AdvisorButton>
             </div>
 
             <p className="text-white/80 mt-6 text-lg">

@@ -328,7 +328,7 @@ const TarifasNormativas = ({ data, items, generals = [], cart, setCart, pages, i
                     <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-white/10 rounded-full animate-pulse delay-500"></div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     {/* Breadcrumbs */}
                     <div className="mb-8">
                         <Breadcrumbs 
@@ -428,7 +428,7 @@ const TarifasNormativas = ({ data, items, generals = [], cart, setCart, pages, i
                                     Calcular mi tarifa
                                     <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-200" />
                                 </button>
-                                <button className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
+                                <button className="!hidden border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:customtext-secondary px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group">
                                     <Globe className="mr-3 h-6 w-6" />
                                     Ver requisitos
                                 </button>

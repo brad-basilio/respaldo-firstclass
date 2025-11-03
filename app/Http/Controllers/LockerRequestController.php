@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\LockerRequest;
 use App\Notifications\LockerRequestNotification;
+use App\Notifications\AdminLockerRequestNotification;
 use App\Helpers\NotificationHelper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -58,7 +59,11 @@ class LockerRequestController extends BasicController
             ]);
 
             // Enviar notificación al cliente y al administrador
-            NotificationHelper::sendToClientAndAdmin($jpa, new LockerRequestNotification($jpa));
+            NotificationHelper::sendToClientAndAdmin(
+                $jpa, 
+                new LockerRequestNotification($jpa),
+                new AdminLockerRequestNotification($jpa)
+            );
             
             Log::info('LockerRequestController - Notificaciones enviadas exitosamente', [
                 'locker_request_id' => $jpa->id

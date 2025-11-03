@@ -25,6 +25,9 @@ const FAQ = ({ data, items = [], generals, cart, setCart, pages, isUser, contact
     const [isVisible, setIsVisible] = useState({});
     const observerRef = useRef(null);
 
+    // Obtener horario de atención desde generals
+    const openingHours = generals.find((x) => x.correlative === "opening_hours")?.description || "Lunes a Viernes 9:00 AM - 6:00 PM (Hora Perú)";
+
     // Intersection Observer for animations
     useEffect(() => {
         observerRef.current = new IntersectionObserver(
@@ -410,7 +413,7 @@ const FAQ = ({ data, items = [], generals, cart, setCart, pages, isUser, contact
                                 Nuestro equipo de atención al cliente está disponible para ayudarte con cualquier consulta
                             </p>
                             
-                            <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                            <div className=" gap-4 max-w-3xl mx-auto">
                                 <a
                                     href="/pqrs"
                                     className="bg-primary hover:opacity-90 text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg flex items-center justify-center gap-2"
@@ -418,25 +421,13 @@ const FAQ = ({ data, items = [], generals, cart, setCart, pages, isUser, contact
                                     <MessageCircle className="w-5 h-5" />
                                     Enviar PQRS
                                 </a>
-                                <a
-                                    href="tel:+51999999999"
-                                    className="bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white hover:customtext-secondary transition-all border-2 border-white flex items-center justify-center gap-2"
-                                >
-                                    <Phone className="w-5 h-5" />
-                                    Llamar
-                                </a>
-                                <a
-                                    href="mailto:ayuda@firstclass.com"
-                                    className="bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white hover:customtext-secondary transition-all border-2 border-white flex items-center justify-center gap-2"
-                                >
-                                    <Mail className="w-5 h-5" />
-                                    Email
-                                </a>
+                             
+                               
                             </div>
 
                             <div className="mt-8 pt-8 border-t border-white/20">
                                 <p className="text-white/80">
-                                    Horario de atención: Lunes a Viernes 9:00 AM - 6:00 PM (Hora Perú)
+                                    Horario de atención: {openingHours}
                                 </p>
                             </div>
                         </div>
