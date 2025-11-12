@@ -228,7 +228,7 @@ const FooterFirstClass = ({ data, socials = [], generals = [] }) => {
                         <ul className="space-y-4">
                              <li className="flex items-start">
                                {/* <MapPin className="min-h-5 min-w-5 customtext-primary mr-2 mt-0.5" /> */}
-                                <p className="text-gray-400">{address}</p>
+                                <p className="text-gray-400 whitespace-pre-line">{address}</p>
                             </li>
                             <li className="flex items-start">
                               {/*  <Mail className="min-h-5 min-w-5 customtext-primary mr-2 mt-0.5 flex-shrink-0" />
