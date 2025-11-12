@@ -1533,7 +1533,7 @@
     "isEntry": true
   },
   "resources/js/About.jsx": {
-    "file": "assets/About-B9Nvna3Y.js",
+    "file": "assets/About-Bco-zqsj.js",
     "name": "About",
     "src": "resources/js/About.jsx",
     "isEntry": true,
@@ -3804,7 +3804,7 @@
     ]
   },
   "resources/js/Blog.jsx": {
-    "file": "assets/Blog-u4tqD8EB.js",
+    "file": "assets/Blog-jS0y4Fn9.js",
     "name": "Blog",
     "src": "resources/js/Blog.jsx",
     "isEntry": true,
@@ -3849,7 +3849,7 @@
     ]
   },
   "resources/js/BlogArticle.jsx": {
-    "file": "assets/BlogArticle-BStN25rf.js",
+    "file": "assets/BlogArticle-C35tht2O.js",
     "name": "BlogArticle",
     "src": "resources/js/BlogArticle.jsx",
     "isEntry": true,
@@ -5600,7 +5600,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Base.jsx": {
-    "file": "assets/Base-CbZ47faL.js",
+    "file": "assets/Base-xyvSv-l1.js",
     "name": "Base",
     "src": "resources/js/Components/Tailwind/Base.jsx",
     "isDynamicEntry": true,
@@ -8591,7 +8591,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Footer.jsx": {
-    "file": "assets/Footer-BQsbiEik.js",
+    "file": "assets/Footer-CqIU43mD.js",
     "name": "Footer",
     "src": "resources/js/Components/Tailwind/Footer.jsx",
     "isEntry": true,
@@ -8734,7 +8734,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Footer/FooterFirstClass.jsx": {
-    "file": "assets/FooterFirstClass-Byte5huW.js",
+    "file": "assets/FooterFirstClass-BAFhdSfi.js",
     "name": "FooterFirstClass",
     "src": "resources/js/Components/Tailwind/Footer/FooterFirstClass.jsx",
     "isDynamicEntry": true,
@@ -8746,9 +8746,6 @@
       "_HtmlContent-ghmllTyl.js",
       "_Global-CazroCzF.js",
       "_index-1Pdwdrgt.js",
-      "_mail-drJGpT4k.js",
-      "_phone-ZNY-sPqk.js",
-      "_map-pin-Cj3PUWlD.js",
       "_x-fof_H3Vv.js",
       "_index-yBjzXJbu.js",
       "__commonjsHelpers-D6-XlEtG.js",
@@ -12528,7 +12525,7 @@
     ]
   },
   "resources/js/Contact.jsx": {
-    "file": "assets/Contact-DpplO9dH.js",
+    "file": "assets/Contact-ARkui99e.js",
     "name": "Contact",
     "src": "resources/js/Contact.jsx",
     "isEntry": true,
@@ -12573,7 +12570,7 @@
     ]
   },
   "resources/js/CourseDetails.jsx": {
-    "file": "assets/CourseDetails-BPiWF8Ef.js",
+    "file": "assets/CourseDetails-CArzX1U-.js",
     "name": "CourseDetails",
     "src": "resources/js/CourseDetails.jsx",
     "isEntry": true,
@@ -12609,7 +12606,7 @@
     ]
   },
   "resources/js/Courses.jsx": {
-    "file": "assets/Courses-BGYFAkcT.js",
+    "file": "assets/Courses-BTk6rUih.js",
     "name": "Courses",
     "src": "resources/js/Courses.jsx",
     "isEntry": true,
@@ -12704,7 +12701,7 @@
     "isEntry": true
   },
   "resources/js/Home.jsx": {
-    "file": "assets/Home-mWFWN_Ec.js",
+    "file": "assets/Home-B68ygie2.js",
     "name": "Home",
     "src": "resources/js/Home.jsx",
     "isEntry": true,
@@ -12845,7 +12842,7 @@
     ]
   },
   "resources/js/Reutilizables/Businesses/BusinessIWorkCard.jsx": {
-    "file": "assets/BusinessIWorkCard-wvwREg5u.js",
+    "file": "assets/BusinessIWorkCard-Cj37azoW.js",
     "name": "BusinessIWorkCard",
     "src": "resources/js/Reutilizables/Businesses/BusinessIWorkCard.jsx",
     "isEntry": true,
@@ -12853,13 +12850,14 @@
       "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
       "_index-BOnQTV8N.js",
       "_main-B6F2O9-U.js",
-      "resources/js/Components/Tailwind/Products/Components/CardProductKatya.jsx",
-      "_BooleanLimit-D-OsQsek.js",
+      "_BasicRest-BML1C-ua.js",
       "_index-yBjzXJbu.js",
       "__commonjsHelpers-D6-XlEtG.js",
       "____vite-browser-external_commonjs-proxy-DDYoOVPM.js",
+      "resources/js/Components/Tailwind/Products/Components/CardProductKatya.jsx",
       "_index-pSueRYGM.js",
-      "_index-B6ujFmsw.js"
+      "_index-B6ujFmsw.js",
+      "_BooleanLimit-D-OsQsek.js"
     ]
   },
   "resources/js/Reutilizables/Pagination/FilterPagination.jsx": {
@@ -12908,7 +12906,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-BRBfUJoq.js",
+    "file": "assets/System-fjj-qAb8.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
