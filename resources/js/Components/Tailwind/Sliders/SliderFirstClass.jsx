@@ -93,7 +93,7 @@ const SliderFirstClass = ({ sliders = [], data }) => {
         <section className={`relative overflow-hidden ${data?.class_slider || ''}`} 
                  style={{ margin: 0, padding: 0 }}>
             {/* Background with gradient and image */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${currentSlideData.bgGradient || 'from-primary to-secondary'} transition-all duration-1000 ease-in-out ${data?.class_overlay || ''}`}>
+            <div className={`absolute inset-0  ${currentSlideData.bgGradient || ' bg-gradient-to-br from-primary to-secondary'} transition-all duration-1000 ease-in-out ${data?.class_overlay || 'bg-gradient-to-b from-[#ffffff] via-[#03989e] to-[#0e99a0]'}`}>
                 <div className="absolute inset-0 opacity-30">
                     <img
                         src={`/storage/images/slider/${currentSlideData.bg_image || currentSlideData.image}`}
@@ -103,7 +103,7 @@ const SliderFirstClass = ({ sliders = [], data }) => {
                     
                     />
                 </div>
-                <div className="absolute inset-0 bg-black/30"></div>
+             
              
             </div>
 
@@ -198,7 +198,7 @@ const SliderFirstClass = ({ sliders = [], data }) => {
                                         <ArrowRight className="ml-3 h-5 w-5 lg:h-6 lg:w-6 group-hover:translate-x-1 transition-transform duration-200" />
                                     </a>
                                 )}
-                                {currentSlideData.secondary_button_text && (
+                                {/*currentSlideData.secondary_button_text && (
                                     <a
                                         href={currentSlideData.secondary_button_link || '#'}
                                         className={`border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 lg:px-10 lg:py-5 rounded-xl text-lg lg:text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center group ${data?.class_button_secondary || ''}`}
@@ -206,46 +206,11 @@ const SliderFirstClass = ({ sliders = [], data }) => {
                                         <MessageCircle className="mr-3 h-5 w-5 lg:h-6 lg:w-6 group-hover:scale-110 transition-transform duration-200" />
                                         {currentSlideData.secondary_button_text}
                                     </a>
-                                )}
+                                )*/}
                             </div>
                         </div>
 
-                        {/* Right Visual */}
-                        <div className="flex justify-center lg:justify-end">
-                            <div 
-                                key={`visual-${currentSlide}`}
-                                className="relative max-w-lg w-full animate-hero-visual"
-                            >
-                                {/* Main Card */}
-                                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 lg:p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-white/20">
-                                    <div className="aspect-square bg-white/20 rounded-2xl overflow-hidden">
-                                        <img
-                                            src={`/storage/images/slider/${currentSlideData.image}`}
-                                            alt={`${currentSlideData.name}-image`}
-                                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                                        onError={(e) => e.target.src = '/api/cover/thumbnail/null'}
-                                        />
-                                    </div>
-                                    
-                                   
-                                </div>
-                                
-                                {/* Floating decorative elements */}
-                                <div className="absolute -top-4 -right-4 flex flex-col space-y-2 animate-hero-dots">
-                                    {[...Array(5)].map((_, i) => (
-                                        <div 
-                                            key={i} 
-                                            className="w-3 h-3 bg-white/40 rounded-full animate-pulse"
-                                            style={{ animationDelay: `${i * 200}ms` }}
-                                        ></div>
-                                    ))}
-                                </div>
-                                
-                                {/* Additional decorative elements */}
-                                <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-primary rounded-full animate-bounce animate-hero-accent-1"></div>
-                                <div className="absolute top-1/4 -left-6 w-4 h-4 bg-secondary rounded-full animate-pulse animate-hero-accent-2"></div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
