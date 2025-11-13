@@ -292,26 +292,18 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
                 <div className="col-12">
                     <div className="page-title-box d-flex align-items-center justify-content-between">
                         <h4 className="mb-0">Constructor de Servicio: {service_name}</h4>
-                        <div className="page-title-right">
-                            <button
-                                className="btn btn-primary btn-sm"
-                                onClick={handlePreview}
-                            >
-                                <i className="mdi mdi-eye mr-1"></i>
-                                Vista Previa
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
 
-            <div className="row">
+            <div className="row mt-4">
                 {/* Sidebar: Plantillas disponibles */}
                 <div className="col-md-2">
                     <div className="card sticky-top" style={{ top: '20px' }}>
                         <div className="card-body p-2">
                             <h6 className="card-title mb-2">
-                                <i className="mdi mdi-plus-circle text-primary mr-1"></i>
+                               
                                 Agregar
                             </h6>
                             <p className="text-muted small mb-2" style={{ fontSize: '11px' }}>
@@ -333,9 +325,9 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
                                             e.currentTarget.style.boxShadow = 'none';
                                         }}
                                     >
-                                        <div className="d-flex align-items-center">
+                                        <div className="d-flex align-items-center gap-1">
                                             <div 
-                                                className={`icon-wrapper text-white rounded p-1 mr-2`}
+                                                className={`icon-wrapper text-white rounded  mr-4`}
                                                 style={{
                                                     background: template.color.replace('bg-', '').includes('blue') ? '#4E73DF' :
                                                                template.color.includes('green') ? '#1CC88A' :
@@ -354,8 +346,8 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
                                             >
                                                 <i className={`${template.icon}`}></i>
                                             </div>
-                                            <div className="flex-1">
-                                                <h6 className="mb-0" style={{ fontSize: '11px', fontWeight: 'bold' }}>{template.name}</h6>
+                                            <div className="flex-1 ml-4" >
+                                                <h6  style={{ fontSize: '11px', fontWeight: 'bold' }}>{template.name}</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -368,11 +360,11 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
                 {/* Main: Secciones agregadas */}
                 <div className="col-md-4">
                     <div className="card">
-                        <div className="card-body p-3">
+                        <div className="card-body p-2">
                             <div className="d-flex justify-content-between align-items-center mb-3">
                                 <div>
                                     <h6 className="card-title mb-0">
-                                        <i className="mdi mdi-view-list text-primary mr-1"></i>
+                                       
                                         Secciones
                                         <span className="badge badge-soft-primary ml-1" style={{ fontSize: '10px' }}>{sections.length}</span>
                                     </h6>
@@ -436,18 +428,7 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
                                                                             <i className="mdi mdi-drag-vertical font-18"></i>
                                                                         </div>
 
-                                                                        {/* Order Number */}
-                                                                        <div className="order-badge text-white rounded d-flex align-items-center justify-content-center mr-2"
-                                                                             style={{ 
-                                                                                 width: '24px', 
-                                                                                 height: '24px', 
-                                                                                 fontSize: '11px', 
-                                                                                 fontWeight: 'bold',
-                                                                                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                                                                 boxShadow: '0 1px 3px rgba(102, 126, 234, 0.3)'
-                                                                             }}>
-                                                                            {index + 1}
-                                                                        </div>
+                                                                       
 
                                                                         {/* Section Info */}
                                                                         <div className="flex-1">

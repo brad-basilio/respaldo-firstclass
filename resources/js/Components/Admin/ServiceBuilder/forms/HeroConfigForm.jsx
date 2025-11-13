@@ -71,33 +71,11 @@ const HeroConfigForm = ({ config, updateConfig }) => {
 
     return (
         <div className="row">
-            <div className="col-12 mb-3">
-                <div className="alert alert-info">
-                    <strong>Orden de visualización:</strong>
-                    <ol className="mb-0 mt-2">
-                        <li>Badge con nombre del servicio (Subtítulo)</li>
-                        <li>Título principal (soporta *palabra* para resaltar en cyan)</li>
-                        <li>Descripción</li>
-                        <li>Botones de acción</li>
-                    </ol>
-                </div>
-            </div>
-
-            {/* Subtítulo (Badge) - Se muestra primero */}
-            <div className="col-12">
-                <InputFormGroup
-                    label="1. Subtítulo (Badge superior)"
-                    value={config.subtitle || ''}
-                    onChange={(e) => updateConfig('subtitle', e.target.value)}
-                    placeholder="Ej: Envíos Perú - USA"
-                    help="Aparece primero, en un badge con fondo transparente"
-                />
-            </div>
-
-            {/* Título - Se muestra segundo */}
+            
+  {/* Título - Se muestra segundo */}
             <div className="col-12">
                 <TextareaFormGroup
-                    label="2. Título Principal *"
+                    label="1. Título Principal"
                     value={config.title || ''}
                     onChange={(e) => updateConfig('title', e.target.value)}
                     rows={3}
@@ -105,6 +83,18 @@ const HeroConfigForm = ({ config, updateConfig }) => {
                     help="Usa *palabra* para resaltar en color cyan. Ejemplo: Envíos *Rápidos* y *Seguros*"
                 />
             </div>
+            {/* Subtítulo (Badge) - Se muestra primero */}
+            <div className="col-12">
+                <InputFormGroup
+                    label="2. Subtítulo"
+                    value={config.subtitle || ''}
+                    onChange={(e) => updateConfig('subtitle', e.target.value)}
+                    placeholder="Ej: Envíos Perú - USA"
+                    help="Aparece primero, en un badge con fondo transparente"
+                />
+            </div>
+
+          
 
             {/* Descripción - Se muestra tercero */}
             <div className="col-12">

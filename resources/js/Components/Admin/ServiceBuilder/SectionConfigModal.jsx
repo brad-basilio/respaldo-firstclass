@@ -53,8 +53,24 @@ const SectionConfigModal = ({ show, onHide, section, onSave }) => {
             // Asegurar que config se envíe correctamente
             config: formData.config || {}
         };
-        await onSave(dataToSave);
+        
+        // Cerrar modal primero
         $(modalRef.current).modal('hide');
+        
+        // Esperar a que el modal se cierre completamente
+        await new Promise(resolve => {
+            $(modalRef.current).on('hidden.bs.modal', function handler() {
+                $(modalRef.current).off('hidden.bs.modal', handler);
+                resolve();
+            });
+        });
+        
+        // Eliminar backdrop manualmente por si acaso
+        $('.modal-backdrop').remove();
+        $('body').removeClass('modal-open');
+        
+        // Ahora sí guardar
+        await onSave(dataToSave);
     };
 
     const updateConfig = (key, value) => {
