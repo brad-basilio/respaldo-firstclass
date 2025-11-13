@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\InnovationController as AdminInnovationController
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\ServiceCategoryController as AdminServiceCategoryController;
 use App\Http\Controllers\Admin\ServiceSubCategoryController as AdminServiceSubCategoryController;
+use App\Http\Controllers\Admin\ServiceSectionController as AdminServiceSectionController;
 use App\Http\Controllers\Admin\SocialController as AdminSocialController;
 use App\Http\Controllers\Admin\StrengthController as AdminStrengthController;
 use App\Http\Controllers\Admin\AppController as AdminAppController;
@@ -92,6 +93,18 @@ if (!file_exists($filePath)) {
 
 $pages = json_decode(File::get($filePath), true);
 
+// Rutas dinámicas de servicios (ANTES de las rutas de páginas)
+$services = \App\Models\Service::where('status', true)
+    ->where('visible', true)
+    ->whereNotNull('slug')
+    ->get();
+
+foreach ($services as $service) {
+    Route::get("/servicio/{$service->slug}", [SystemController::class, 'serviceView'])
+        ->defaults('service_id', $service->id)
+        ->name("Tailwind/ServiceBuilder.jsx");
+}
+
 // Public routes
 foreach ($pages as $page) {
     Route::get($page['path'], [SystemController::class, 'reactView'])->name('System.jsx');
@@ -141,6 +154,7 @@ Route::middleware(['can:Admin', 'auth'])->prefix('admin')->group(function () {
     Route::get('/posts', [AdminPostController::class, 'reactView'])->name('Admin/Posts.jsx');
     Route::get('/innovations', [AdminInnovationController::class, 'reactView'])->name('Admin/Innovations.jsx');
     Route::get('/services', [AdminServiceController::class, 'reactView'])->name('Admin/Services.jsx');
+    Route::get('/service-sections', [AdminServiceSectionController::class, 'reactView'])->name('Admin/ServiceSections.jsx');
     Route::get('/service-categories', [AdminServiceCategoryController::class, 'reactView'])->name('Admin/ServiceCategories.jsx');
     Route::get('/service-subcategories', [AdminServiceSubCategoryController::class, 'reactView'])->name('Admin/ServiceSubcategory.jsx');
     Route::get('/about', [AdminAboutusController::class, 'reactView'])->name('Admin/About.jsx');

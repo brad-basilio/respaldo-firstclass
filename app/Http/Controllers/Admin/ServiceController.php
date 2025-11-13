@@ -15,7 +15,7 @@ class ServiceController extends BasicController
     public $model = Service::class;
     public $reactView = 'Admin/Services';
     public $imageFields = ['image', 'background_image'];
-    public $with4get = ['category', 'subcategory'];
+    public $with4get = ['category', 'subcategory', 'sections'];
 
     public function setReactViewProperties(Request $request)
     {
@@ -44,7 +44,7 @@ class ServiceController extends BasicController
 
     public function setPaginationInstance(Request $request, string $model)
     {
-        return $model::with(['category', 'subcategory']);
+        return $model::with(['category', 'subcategory', 'sections']);
     }
 
     public function beforeSave(Request $request)

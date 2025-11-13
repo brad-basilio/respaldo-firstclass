@@ -156,7 +156,7 @@ const HeaderFirstClass = ({
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center space-x-8">
                             {/* Servicios con Mega Menu - Solo si hay servicios */}
-                            {hasServices && (
+                           
                                 <div 
                                     className="relative"
                                     onMouseEnter={handleMouseEnter}
@@ -173,8 +173,7 @@ const HeaderFirstClass = ({
                                         <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 group-hover:text-secondary ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
                                     </button>
                                 </div>
-                            )}
-                            
+                        
                             {/* Menu principal */}
                             <a 
                                 href="/blog" 

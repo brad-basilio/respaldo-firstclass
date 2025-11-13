@@ -40,4 +40,9 @@ class Service extends Model
     {
         return $this->belongsTo(ServiceSubCategory::class, 'service_subcategory_id');
     }
+
+    public function sections()
+    {
+        return $this->hasMany(ServiceSection::class)->orderBy('order_index');
+    }
 }

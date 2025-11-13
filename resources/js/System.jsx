@@ -53,6 +53,7 @@ const Subscription = React.lazy(() => import("./Components/Tailwind/Subscription
 const Agradecimientos = React.lazy(() => import("./Components/Tailwind/Agradecimientos"));
 const Support = React.lazy(() => import("./Components/Tailwind/Support"));
 const FirstClass = React.lazy(() => import("./Components/Tailwind/FirstClass"));
+const ServiceBuilder = React.lazy(() => import("./Components/Tailwind/ServiceBuilder"));
 
 // Componente de carga para usar con Suspense
 const LoadingFallback = () => {
@@ -401,6 +402,8 @@ const System = ({
                 return <Support which={value} data={data} items={getItems(itemsId)} />
             case "firstclass":
                 return <FirstClass {...componentProps} />
+            case "service-builder":
+                return <ServiceBuilder which={value} data={data} items={getItems(itemsId)} generals={generals} contacts={contacts} pages={pages} />
             default:
                 return <NoComponent which={value} />
         }

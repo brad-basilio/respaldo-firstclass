@@ -365,6 +365,14 @@ const Services = ({ service_categories = [], service_sub_categories = [] }) => {
                             );
                             container.append(
                                 DxButton({
+                                    className: "btn btn-xs btn-soft-info",
+                                    title: "Configurar Secciones",
+                                    icon: "fa fa-cog",
+                                    onClick: () => window.location.href = `/admin/service-sections?service_id=${data.id}`,
+                                })
+                            );
+                            container.append(
+                                DxButton({
                                     className: "btn btn-xs btn-soft-danger",
                                     title: "Eliminar",
                                     icon: "fa fa-trash",
@@ -491,6 +499,31 @@ const Services = ({ service_categories = [], service_sub_categories = [] }) => {
                                 </div>
                             
                     </div>
+                    
+                    {/* Botón para configurar secciones (solo cuando se está editando) */}
+                    {isEditing && idRef.current?.value && (
+                        <div className="row mt-3">
+                            <div className="col-12">
+                                <div className="alert alert-info d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <i className="mdi mdi-puzzle mr-2"></i>
+                                        <strong>Service Builder</strong>
+                                        <p className="mb-0 mt-1 small">
+                                            Construye tu servicio agregando y configurando secciones modulares
+                                        </p>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        className="btn btn-info"
+                                        onClick={() => window.location.href = `/admin/service-sections?service_id=${idRef.current.value}`}
+                                    >
+                                        <i className="mdi mdi-cog mr-1"></i>
+                                        Configurar Secciones
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
               
             </Modal>

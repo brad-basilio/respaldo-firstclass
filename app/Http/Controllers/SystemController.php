@@ -24,9 +24,15 @@ class SystemController extends BasicController
     public $model = System::class;
     public $reactView = 'System';
     public $reactRootView = 'public';
+    public $serviceData = null;
 
     public function setReactViewProperties(Request $request)
     {
+        // If we have service data (from serviceView), return it
+        if (isset($this->serviceData)) {
+            return $this->serviceData;
+        }
+        
         $path = $request->server('REQUEST_URI') ?? '/';
         $pages = JSON::parse(File::get(storage_path('app/pages.json')));
         $components = JSON::parse(File::get(storage_path('app/components.json')));
@@ -251,5 +257,82 @@ class SystemController extends BasicController
         $props['textstatic'] = Aboutus::where('visible', true)->where('status', true)->get();
 
         return $props;
+    }
+
+    /**
+     * Render dynamic service view based on slug
+     */
+    public function serviceView(Request $request)
+    {
+        $serviceId = $request->route('service_id');
+        $service = \App\Models\Service::with(['sections' => function($query) {
+            $query->where('visible', true)
+                  ->where('status', true)
+                  ->orderBy('order_index');
+        }, 'category', 'subcategory'])
+        ->findOrFail($serviceId);
+
+        // Load generals for service page
+        $generals = General::all();
+
+        // Load base template systems
+        $systems = System::whereNull('page_id')->get();
+        
+        // Get colors
+        $colors = SystemColor::all();
+
+        // Get fonts
+        $fonts = [
+            'title' => [
+                'name' => Setting::get('title-font-name'),
+                'url' => Setting::get('title-font-url'),
+                'source' => Setting::get('title-font-source')
+            ],
+            'paragraph' => [
+                'name' => Setting::get('paragraph-font-name'),
+                'url' => Setting::get('paragraph-font-url'),
+                'source' => Setting::get('paragraph-font-source')
+            ]
+        ];
+
+        // Load service categories with services for header menu
+        $serviceCategories = \App\Models\ServiceCategory::with(['services' => function($query) {
+            $query->where('visible', true)
+                  ->where('status', true)
+                  ->orderBy('id');
+        }])
+        ->where('visible', true)
+        ->where('status', true)
+        ->orderBy('id')
+        ->get();
+
+        // Set react view to ServiceBuilder
+        $this->reactView = 'Tailwind/ServiceBuilder';
+        $this->reactRootView = 'public';
+        
+        // Override setReactViewProperties to pass service data
+        $this->serviceData = [
+            'service' => $service,
+            'generals' => $generals,
+            'systems' => $systems,
+            'colors' => $colors,
+            'fonts' => $fonts,
+            'serviceCategories' => $serviceCategories,
+        ];
+        
+        // Data for blade view (SEO, meta tags, etc)
+        $this->reactData = [
+            'service' => $service,
+            'generals' => $generals,
+            'systems' => $systems,
+            'colors' => $colors,
+            'fonts' => $fonts,
+            'serviceCategories' => $serviceCategories,
+            'name' => $service->name,
+            'title' => $service->name . ' | ' . config('app.name'),
+            'description' => $service->description,
+        ];
+
+        return $this->reactView($request);
     }
 }

@@ -360,6 +360,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/services/{field}', [AdminServiceController::class, 'boolean']);
     Route::delete('/services/{id}', [AdminServiceController::class, 'delete']);
 
+    // Service Builder - Service Sections
+    Route::get('/service-sections', [App\Http\Controllers\Admin\ServiceSectionController::class, 'list']);
+    Route::post('/service-sections', [App\Http\Controllers\Admin\ServiceSectionController::class, 'saveSection']);
+    Route::patch('/service-sections/{field}', [App\Http\Controllers\Admin\ServiceSectionController::class, 'boolean']);
+    Route::delete('/service-sections/{id}', [App\Http\Controllers\Admin\ServiceSectionController::class, 'destroy']);
+    Route::post('/service-sections/reorder', [App\Http\Controllers\Admin\ServiceSectionController::class, 'reorderSections']);
+    Route::post('/service-sections/upload-image', [App\Http\Controllers\Admin\ImageUploadController::class, 'store']);
+
     Route::post('/service-categories', [AdminServiceCategoryController::class, 'save']);
     Route::post('/service-categories/paginate', [AdminServiceCategoryController::class, 'paginate']);
     Route::patch('/service-categories/status', [AdminServiceCategoryController::class, 'status']);

@@ -26,6 +26,7 @@ export default defineConfig({
     // },
     resolve: {
         alias: {
+            '@': path.resolve(__dirname, 'resources/js'),
             '@Adminto': path.resolve(__dirname, 'resources/js/Components/Adminto'),
             '@Tailwind': path.resolve(__dirname, 'resources/js/Components/Tailwind'),
             '@Utils': path.resolve(__dirname, 'resources/js/Utils'),
