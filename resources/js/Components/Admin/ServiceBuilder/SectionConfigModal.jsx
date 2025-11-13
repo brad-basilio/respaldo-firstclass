@@ -41,7 +41,29 @@ const SectionConfigModal = ({ show, onHide, section, onSave }) => {
         } else if (!show && modalRef.current) {
             $(modalRef.current).modal('hide');
         }
-    }, [show]);
+
+        // Limpiar backdrop y llamar onHide cuando se cierre el modal
+        const handleModalClose = () => {
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open');
+            $('body').css('padding-right', '');
+            
+            // Llamar onHide para actualizar el estado del padre
+            if (onHide) {
+                onHide();
+            }
+        };
+
+        if (modalRef.current) {
+            $(modalRef.current).on('hidden.bs.modal', handleModalClose);
+        }
+
+        return () => {
+            if (modalRef.current) {
+                $(modalRef.current).off('hidden.bs.modal', handleModalClose);
+            }
+        };
+    }, [show, onHide]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

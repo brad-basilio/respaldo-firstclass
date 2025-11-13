@@ -68,14 +68,14 @@ const HeroSection = ({ config, service }) => {
 
                     {/* Subtitle */}
                     {subtitle && (
-                        <p className="text-xl font-bold text-white mb-8">
+                        <p className="text-xl lg:text-2xl text-white/90 mb-4 transition-all duration-1000 delay-900 opacity-100 translate-y-0">
                             {subtitle}
                         </p>
                     )}
 
                     {/* Description */}
                     {description && (
-                        <p className="text-xl font-bold text-white mb-8">
+                        <p className="text-lg text-white/80 mb-8 transition-all duration-1000 delay-1200 opacity-100 translate-y-0">
                             {description}
                         </p>
                     )}
