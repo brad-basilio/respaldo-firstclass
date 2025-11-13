@@ -362,7 +362,7 @@ const Sliders = () => {
                 Botones
               </a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" hidden={!Fillable.has('sliders', 'title_color') && !Fillable.has('sliders', 'description_color')}>
               <a 
                 href="#form-tab-colors" 
                 className={`nav-link ${activeFormTab === 'colors' ? 'active' : ''}`}
@@ -385,7 +385,7 @@ const Sliders = () => {
 
         {/* Media Tab */}
         <div className={`col-12 ${activeFormTab !== 'media' ? 'd-none' : ''}`}>
-          <ul hidden={!Fillable.has('sliders', 'image') || !Fillable.has('sliders', 'bg_image') || !Fillable.has('sliders', 'bg_video')} className="nav nav-pills navtab-bg nav-justified">
+          <ul hidden={!Fillable.has('sliders', 'bg_image') || !Fillable.has('sliders', 'bg_video')} className="nav nav-pills navtab-bg nav-justified">
             <li className="nav-item">
               <a href="#tab-image" data-bs-toggle="tab" aria-expanded="false" className={`nav-link ${activeTab == 'image' && 'active'}`} onClick={() => setActiveTab('image')}>
                 Imagen
@@ -437,7 +437,10 @@ const Sliders = () => {
             <InputFormGroup eRef={buttonTextRef} label='Texto del botón' col='col-sm-6' required />
             <InputFormGroup eRef={buttonLinkRef} label='URL del botón' col='col-sm-6' required />
             
-            <div className='col-12 mt-3 mb-3'>
+           
+          </div>
+          <div className='row' hidden={!Fillable.has('sliders', 'secondary_button_text') || !Fillable.has('sliders', 'secondary_button_link')}>
+             <div className='col-12 mt-3 mb-3'>
               <h6 className='text-muted'>Botón Secundario</h6>
             </div>
             <InputFormGroup eRef={secondaryButtonTextRef} label='Texto del botón secundario' col='col-sm-6' />

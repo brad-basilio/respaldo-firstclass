@@ -88,20 +88,92 @@ const SliderFirstClass = ({ sliders = [], data }) => {
     }, [isAnimating]);
 
     const currentSlideData = slides[currentSlide];
+    console.log('Current Slide Data:', currentSlideData);
+
+    // Extraer el ID del video de YouTube o usar directamente el ID si ya viene limpio
+    const getYoutubeEmbedUrl = (input) => {
+        if (!input) return null;
+        
+        let videoId = input;
+        
+        // Si parece ser una URL completa, extraer el ID
+        if (input.includes('youtube.com') || input.includes('youtu.be')) {
+            const patterns = [
+                /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/,
+                /youtube\.com\/embed\/([^&\n?#]+)/,
+                /youtube\.com\/v\/([^&\n?#]+)/
+            ];
+            
+            for (let pattern of patterns) {
+                const match = input.match(pattern);
+                if (match && match[1]) {
+                    videoId = match[1];
+                    break;
+                }
+            }
+        }
+        
+        // Limpiar cualquier parámetro adicional del ID
+        videoId = videoId.split('&')[0].split('?')[0];
+        
+        // Construir la URL embed
+        return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+    };
+
+    // Validar que bg_video tenga un valor real (no null, "null", undefined, o vacío)
+    const hasValidVideo = currentSlideData?.bg_video && 
+                         currentSlideData.bg_video !== 'null' && 
+                         currentSlideData.bg_video.trim() !== '';
+    
+    const videoEmbedUrl = hasValidVideo ? getYoutubeEmbedUrl(currentSlideData.bg_video) : null;
+    
+    // Debug - puedes comentar esto después de verificar
+    useEffect(() => {
+        console.log('=== SLIDER DEBUG ===');
+        console.log('Current Slide Index:', currentSlide);
+        console.log('Current Slide Data:', currentSlideData);
+        console.log('bg_video value:', currentSlideData?.bg_video);
+        console.log('bg_video type:', typeof currentSlideData?.bg_video);
+        console.log('hasValidVideo:', hasValidVideo);
+        console.log('Video Embed URL:', videoEmbedUrl);
+        console.log('==================');
+    }, [currentSlide]);
 
     return (
         <section className={`relative overflow-hidden ${data?.class_slider || ''}`} 
                  style={{ margin: 0, padding: 0 }}>
-            {/* Background with gradient and image */}
+            {/* Background with gradient and image/video */}
             <div className={`absolute inset-0  ${currentSlideData.bgGradient || ' bg-gradient-to-br from-primary to-secondary'} transition-all duration-1000 ease-in-out ${data?.class_overlay || 'bg-gradient-to-b from-[#ffffff] via-[#03989e] to-[#0e99a0]'}`}>
                 <div className="absolute inset-0 opacity-30">
-                    <img
-                        src={`/storage/images/slider/${currentSlideData.bg_image || currentSlideData.image}`}
-                        alt={`${currentSlideData.name}-background`}
-                        className="w-full h-full object-cover transition-all duration-1000"
-                                        onError={(e) => e.target.src = '/api/cover/thumbnail/null'}
-                    
-                    />
+                    {videoEmbedUrl ? (
+                        <div className="w-full h-full relative overflow-hidden">
+                            <iframe
+                                key={`video-${currentSlide}`}
+                                src={videoEmbedUrl}
+                                className="absolute pointer-events-none"
+                                style={{ 
+                                    top: '50%',
+                                    left: '50%',
+                                    width: '177.77777778vh',
+                                    minWidth: '100%',
+                                    height: '56.25vw',
+                                    minHeight: '100%',
+                                    transform: 'translate(-50%, -50%)',
+                                }}
+                                frameBorder="0"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                                title={`${currentSlideData.name}-background-video`}
+                            />
+                        </div>
+                    ) : (
+                        <img
+                            src={`/storage/images/slider/${currentSlideData.bg_image || currentSlideData.image}`}
+                            alt={`${currentSlideData.name}-background`}
+                            className="w-full h-full object-cover transition-all duration-1000"
+                            onError={(e) => e.target.src = '/api/cover/thumbnail/null'}
+                        />
+                    )}
                 </div>
              
              
