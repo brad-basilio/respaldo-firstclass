@@ -8,6 +8,7 @@ import HeroConfigForm from './forms/HeroConfigForm';
 import HowItWorksConfigForm from './forms/HowItWorksConfigForm';
 import StepsConfigForm from './forms/StepsConfigForm';
 import BenefitsConfigForm from './forms/BenefitsConfigForm';
+import PartnersConfigForm from './forms/PartnersConfigForm';
 import FaqConfigForm from './forms/FaqConfigForm';
 import CtaConfigForm from './forms/CtaConfigForm';
 import CalculatorConfigForm from './forms/CalculatorConfigForm';
@@ -130,6 +131,8 @@ const SectionConfigModal = ({ show, onHide, section, onSave }) => {
                 return <StepsConfigForm {...commonProps} />;
             case 'benefits':
                 return <BenefitsConfigForm {...commonProps} />;
+            case 'partners':
+                return <PartnersConfigForm {...commonProps} />;
             case 'faq':
                 return <FaqConfigForm {...commonProps} />;
             case 'cta':

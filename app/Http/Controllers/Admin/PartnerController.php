@@ -22,4 +22,21 @@ class PartnerController extends BasicController
             'details' => $details,
         ];
     }
+
+    public function getVisiblePartners(Request $request)
+    {
+        try {
+            $partners = Partner::where('visible', true)
+                ->where('status', true)
+                ->orderBy('created_at', 'desc')
+                ->get(['id', 'name', 'description', 'image']);
+
+            return response()->json($partners);
+        } catch (Exception $e) {
+            return response()->json([
+                'error' => 'Error loading partners',
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
 }

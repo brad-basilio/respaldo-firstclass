@@ -110,6 +110,21 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             }
         },
         {
+            type: 'partners',
+            name: 'Partners / Tiendas',
+            icon: 'mdi mdi-store',
+            color: 'bg-teal-500',
+            description: 'Carrusel de partners/tiendas disponibles',
+            defaultConfig: {
+                title: '¿Dónde comprar con *Casillero Virtual?*',
+                description: 'Compra en las mejores tiendas de Estados Unidos como *Amazon, Macy\'s, Apple Store, Walmart* y muchas más con tu dirección en Miami, y recibe tus paquetes en *Perú* rápido, seguro y a bajo costo con *FirstClass Casillero Virtual.*',
+                carousel_style: 'grid',
+                items_per_row: 6,
+                background: 'white',
+                auto_scroll: true,
+            }
+        },
+        {
             type: 'calculator',
             name: 'Calculadora',
             icon: 'mdi mdi-calculator',

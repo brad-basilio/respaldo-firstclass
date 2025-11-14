@@ -3235,7 +3235,7 @@
     ]
   },
   "resources/js/Admin/ServiceSections.jsx": {
-    "file": "assets/ServiceSections-BrVvjFZg.js",
+    "file": "assets/ServiceSections-BuO5ITn9.js",
     "name": "ServiceSections",
     "src": "resources/js/Admin/ServiceSections.jsx",
     "isEntry": true,
@@ -4112,6 +4112,18 @@
       "_index-yBjzXJbu.js",
       "__commonjsHelpers-D6-XlEtG.js",
       "_index-B6ujFmsw.js"
+    ]
+  },
+  "resources/js/Components/Admin/ServiceBuilder/forms/PartnersConfigForm.jsx": {
+    "file": "assets/PartnersConfigForm--pJTheE3.js",
+    "name": "PartnersConfigForm",
+    "src": "resources/js/Components/Admin/ServiceBuilder/forms/PartnersConfigForm.jsx",
+    "isEntry": true,
+    "imports": [
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js"
     ]
   },
   "resources/js/Components/Admin/ServiceBuilder/forms/StepsConfigForm.jsx": {
@@ -11839,6 +11851,18 @@
       "resources/js/Components/Tailwind/FirstClass/LockerButton.jsx"
     ]
   },
+  "resources/js/Components/Tailwind/Sections/PartnersSection.jsx": {
+    "file": "assets/PartnersSection--pJTheE3.js",
+    "name": "PartnersSection",
+    "src": "resources/js/Components/Tailwind/Sections/PartnersSection.jsx",
+    "isEntry": true,
+    "imports": [
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js"
+    ]
+  },
   "resources/js/Components/Tailwind/Service.jsx": {
     "file": "assets/Service-BsSmbXDO.js",
     "name": "Service",
@@ -11859,7 +11883,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-CyOuXrNQ.js",
+    "file": "assets/ServiceBuilder-DDiIHTtN.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Components/Tailwind/ServiceBuilder.jsx",
     "isDynamicEntry": true,
@@ -11875,7 +11899,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx": {
-    "file": "assets/SectionRenderer-glOkkZIh.js",
+    "file": "assets/SectionRenderer-C6-6m4BX.js",
     "name": "SectionRenderer",
     "src": "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx",
     "isDynamicEntry": true,
@@ -11892,6 +11916,7 @@
       "resources/js/Components/Tailwind/ServiceBuilder/sections/CalculatorSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/StepsSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/BenefitsSection.jsx",
+      "resources/js/Components/Tailwind/Sections/PartnersSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/FaqSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/CtaSection.jsx",
       "resources/js/Components/Tailwind/FirstClass/BrandsCarousel.jsx",
@@ -13272,7 +13297,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-DuwN2Xli.js",
+    "file": "assets/System-Dgj6k7nu.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13401,7 +13426,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-DJfNL-y_.js",
+    "file": "assets/ServiceBuilder-D8--Dnyb.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,
