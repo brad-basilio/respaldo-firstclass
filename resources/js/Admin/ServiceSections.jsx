@@ -56,24 +56,41 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             }
         },
         {
-            type: 'steps',
-            name: 'Proceso en Pasos',
-            icon: 'mdi mdi-format-list-numbered',
+            type: 'howitworks',
+            name: 'Cómo Funciona (con Animación)',
+            icon: 'mdi mdi-airplane',
             color: 'bg-green-500',
-            description: 'Muestra el proceso en pasos numerados',
+            description: 'Pasos con animación de avión USA↔Perú',
             defaultConfig: {
-                title: '¿Cómo funciona?',
-                subtitle: 'Proceso Simple',
+                title: '¿Cómo funciona el servicio de',
+                highlightedTitle: 'envíos internacionales?',
+                description: 'Proceso simple y seguro para tus envíos internacionales.',
+                direction: 'usa-peru',
+                originCountry: {
+                    flag: '🇺🇸',
+                    name: 'Miami, FL',
+                    subtitle: 'Tu dirección'
+                },
+                destinationCountry: {
+                    flag: '🇵🇪',
+                    name: 'Perú',
+                    subtitle: 'Tu hogar'
+                },
                 steps: [
-                    { icon: 'User', title: 'Paso 1', description: 'Descripción del paso' },
-                    { icon: 'Package', title: 'Paso 2', description: 'Descripción del paso' },
-                    { icon: 'CheckCircle', title: 'Paso 3', description: 'Descripción del paso' },
+                    { id: 1, iconName: 'User', title: 'Regístrate Gratis', description: 'Crea tu cuenta y obtén acceso', color: 'bg-primary' },
+                    { id: 2, iconName: 'Package', title: 'Consolida', description: 'Agrupa tus compras', color: 'bg-secondary' },
+                    { id: 3, iconName: 'Plane', title: 'Enviamos', description: 'Transportamos tu paquete', color: 'bg-neutral-dark' },
+                    { id: 4, iconName: 'CheckCircle', title: 'Recibe', description: 'Entrega en tu dirección', color: 'bg-neutral-light' },
                 ],
-                auto_advance: true,
-                interval: 3000,
-                show_numbers: true,
+                ctaButton: {
+                    type: 'link',
+                    text: 'Comenzar ahora',
+                    link: '#'
+                },
+                bgColor: 'bg-accent'
             }
         },
+       
         {
             type: 'benefits',
             name: 'Beneficios',

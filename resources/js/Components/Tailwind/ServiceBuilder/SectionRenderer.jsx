@@ -3,6 +3,7 @@ import React, { lazy } from 'react';
 // Lazy load de todas las secciones disponibles
 const sectionComponents = {
     'hero': lazy(() => import('./sections/HeroSection')),
+    'howitworks': lazy(() => import('../Sections/HowItWorksSection')),
     'calculator': lazy(() => import('./sections/CalculatorSection')),
     'steps': lazy(() => import('./sections/StepsSection')),
     'benefits': lazy(() => import('./sections/BenefitsSection')),

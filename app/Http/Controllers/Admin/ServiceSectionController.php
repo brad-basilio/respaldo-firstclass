@@ -66,7 +66,7 @@ class ServiceSectionController extends BasicController
     {
         $validator = Validator::make($request->all(), [
             'service_id' => 'required|uuid|exists:services,id',
-            'section_type' => 'required|string|in:hero,steps,benefits,faq,cta,calculator,testimonials',
+            'section_type' => 'required|string|in:hero,howitworks,steps,benefits,faq,cta,calculator,testimonials',
             'section_name' => 'required|string|max:255',
             'config' => 'nullable|array',
             'visible' => 'boolean',

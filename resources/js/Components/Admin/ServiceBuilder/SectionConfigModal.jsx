@@ -5,6 +5,7 @@ import SwitchFormGroup from '../../Adminto/form/SwitchFormGroup';
 
 // Importar formularios de configuración
 import HeroConfigForm from './forms/HeroConfigForm';
+import HowItWorksConfigForm from './forms/HowItWorksConfigForm';
 import StepsConfigForm from './forms/StepsConfigForm';
 import BenefitsConfigForm from './forms/BenefitsConfigForm';
 import FaqConfigForm from './forms/FaqConfigForm';
@@ -123,6 +124,8 @@ const SectionConfigModal = ({ show, onHide, section, onSave }) => {
         switch (formData.section_type) {
             case 'hero':
                 return <HeroConfigForm {...commonProps} />;
+            case 'howitworks':
+                return <HowItWorksConfigForm {...commonProps} />;
             case 'steps':
                 return <StepsConfigForm {...commonProps} />;
             case 'benefits':

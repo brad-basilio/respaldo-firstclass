@@ -257,15 +257,6 @@
       "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx"
     ]
   },
-  "_LockerButton-CsGHxZjY.js": {
-    "file": "assets/LockerButton-CsGHxZjY.js",
-    "name": "LockerButton",
-    "imports": [
-      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
-      "_index-BOnQTV8N.js",
-      "resources/js/Components/Tailwind/FirstClass/CasilleroVirtual.jsx"
-    ]
-  },
   "_LockerRequestsRest-DN2k928D.js": {
     "file": "assets/LockerRequestsRest-DN2k928D.js",
     "name": "LockerRequestsRest",
@@ -1543,7 +1534,7 @@
     "isEntry": true
   },
   "resources/js/About.jsx": {
-    "file": "assets/About-GMcn7n7N.js",
+    "file": "assets/About-BOctebuN.js",
     "name": "About",
     "src": "resources/js/About.jsx",
     "isEntry": true,
@@ -3222,7 +3213,7 @@
     ]
   },
   "resources/js/Admin/ServiceSections.jsx": {
-    "file": "assets/ServiceSections-D5cZ2-cK.js",
+    "file": "assets/ServiceSections-DyK_kpEN.js",
     "name": "ServiceSections",
     "src": "resources/js/Admin/ServiceSections.jsx",
     "isEntry": true,
@@ -3239,6 +3230,15 @@
       "_InputFormGroup-iZIO11ZN.js",
       "_TextareaFormGroup-CliirJM1.js",
       "_SelectFormGroup-X8WqJHHl.js",
+      "_map-pin-Cj3PUWlD.js",
+      "_shield-BR0A2VCY.js",
+      "_globe-DcMD-BAW.js",
+      "_truck-Jem9n-g5.js",
+      "_flag-DmhZV1Kr.js",
+      "_circle-check-big-CYWUGR3Z.js",
+      "_plane-BVBhfl5p.js",
+      "_package-DBFPPBi1.js",
+      "_user-BZB1h7Cv.js",
       "_Modal-xDw9ufjg.js",
       "_objectWithoutPropertiesLoose-CoVnHxV7.js",
       "_redux-_GL-VrQv.js",
@@ -3259,6 +3259,7 @@
       "_LaravelSession-Dz9cpV3l.js",
       "_BooleanLimit-D-OsQsek.js",
       "resources/js/Components/Tailwind/Products/Components/CardProductKatya.jsx",
+      "_createLucideIcon-DfjclApS.js",
       "_objectSpread2-Ds01wz0I.js"
     ],
     "css": [
@@ -3859,7 +3860,7 @@
     ]
   },
   "resources/js/Blog.jsx": {
-    "file": "assets/Blog-Bf-NwrMI.js",
+    "file": "assets/Blog-DOb9-X78.js",
     "name": "Blog",
     "src": "resources/js/Blog.jsx",
     "isEntry": true,
@@ -3904,7 +3905,7 @@
     ]
   },
   "resources/js/BlogArticle.jsx": {
-    "file": "assets/BlogArticle-CKgaVu2p.js",
+    "file": "assets/BlogArticle-B3sKfTy7.js",
     "name": "BlogArticle",
     "src": "resources/js/BlogArticle.jsx",
     "isEntry": true,
@@ -3989,7 +3990,7 @@
     "src": "resources/js/Components/About/images/history.png"
   },
   "resources/js/Components/Admin/ServiceBuilder/SectionConfigModal.jsx": {
-    "file": "assets/SectionConfigModal-v9UXMwbX.js",
+    "file": "assets/SectionConfigModal-qHdpvODn.js",
     "name": "SectionConfigModal",
     "src": "resources/js/Components/Admin/ServiceBuilder/SectionConfigModal.jsx",
     "isEntry": true,
@@ -3997,8 +3998,10 @@
       "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
       "_index-BOnQTV8N.js",
       "resources/js/Components/Admin/ServiceBuilder/forms/HeroConfigForm.jsx",
+      "resources/js/Utils/ReactAppend.jsx",
       "_index-yBjzXJbu.js",
-      "__commonjsHelpers-D6-XlEtG.js"
+      "__commonjsHelpers-D6-XlEtG.js",
+      "_index-B6ujFmsw.js"
     ]
   },
   "resources/js/Components/Admin/ServiceBuilder/forms/BenefitsConfigForm.jsx": {
@@ -4059,6 +4062,20 @@
       "_index-BOnQTV8N.js",
       "_index-yBjzXJbu.js",
       "__commonjsHelpers-D6-XlEtG.js"
+    ]
+  },
+  "resources/js/Components/Admin/ServiceBuilder/forms/HowItWorksConfigForm.jsx": {
+    "file": "assets/HowItWorksConfigForm-C0yqsJPt.js",
+    "name": "HowItWorksConfigForm",
+    "src": "resources/js/Components/Admin/ServiceBuilder/forms/HowItWorksConfigForm.jsx",
+    "isEntry": true,
+    "imports": [
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "resources/js/Utils/ReactAppend.jsx",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js",
+      "_index-B6ujFmsw.js"
     ]
   },
   "resources/js/Components/Admin/ServiceBuilder/forms/StepsConfigForm.jsx": {
@@ -5752,7 +5769,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Base.jsx": {
-    "file": "assets/Base-CW92n-63.js",
+    "file": "assets/Base-DhmjM7Xr.js",
     "name": "Base",
     "src": "resources/js/Components/Tailwind/Base.jsx",
     "isDynamicEntry": true,
@@ -8456,7 +8473,7 @@
     ]
   },
   "resources/js/Components/Tailwind/FirstClass.jsx": {
-    "file": "assets/FirstClass-D7zTlKfm.js",
+    "file": "assets/FirstClass-6SyVHKOV.js",
     "name": "FirstClass",
     "src": "resources/js/Components/Tailwind/FirstClass.jsx",
     "isDynamicEntry": true,
@@ -9184,7 +9201,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Header.jsx": {
-    "file": "assets/Header-IDBCZSwe.js",
+    "file": "assets/Header-DNz5CpJu.js",
     "name": "Header",
     "src": "resources/js/Components/Tailwind/Header.jsx",
     "isEntry": true,
@@ -11757,6 +11774,33 @@
       "_General-apRuNwp7.js"
     ]
   },
+  "resources/js/Components/Tailwind/Sections/HowItWorksSection.jsx": {
+    "file": "assets/HowItWorksSection-DurbFAsd.js",
+    "name": "HowItWorksSection",
+    "src": "resources/js/Components/Tailwind/Sections/HowItWorksSection.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_preload-helper-BfFHrpNk.js",
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "_map-pin-Cj3PUWlD.js",
+      "_shield-BR0A2VCY.js",
+      "_globe-DcMD-BAW.js",
+      "_truck-Jem9n-g5.js",
+      "_flag-DmhZV1Kr.js",
+      "_circle-check-big-CYWUGR3Z.js",
+      "_plane-BVBhfl5p.js",
+      "_package-DBFPPBi1.js",
+      "_user-BZB1h7Cv.js",
+      "_arrow-right-MB8dWH_Y.js",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js",
+      "_createLucideIcon-DfjclApS.js"
+    ],
+    "dynamicImports": [
+      "resources/js/Components/Tailwind/FirstClass/LockerButton.jsx"
+    ]
+  },
   "resources/js/Components/Tailwind/Service.jsx": {
     "file": "assets/Service-BsSmbXDO.js",
     "name": "Service",
@@ -11777,7 +11821,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-D5rrowxw.js",
+    "file": "assets/ServiceBuilder-Dt1QFv1O.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Components/Tailwind/ServiceBuilder.jsx",
     "isDynamicEntry": true,
@@ -11793,7 +11837,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx": {
-    "file": "assets/SectionRenderer-C1wd66ZG.js",
+    "file": "assets/SectionRenderer-BD8D8_-z.js",
     "name": "SectionRenderer",
     "src": "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx",
     "isDynamicEntry": true,
@@ -11806,6 +11850,7 @@
     ],
     "dynamicImports": [
       "resources/js/Components/Tailwind/ServiceBuilder/sections/HeroSection.jsx",
+      "resources/js/Components/Tailwind/Sections/HowItWorksSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/CalculatorSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/StepsSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/BenefitsSection.jsx",
@@ -12808,7 +12853,7 @@
     ]
   },
   "resources/js/Contact.jsx": {
-    "file": "assets/Contact-Cim4wsqW.js",
+    "file": "assets/Contact-C9d5LO0M.js",
     "name": "Contact",
     "src": "resources/js/Contact.jsx",
     "isEntry": true,
@@ -12853,7 +12898,7 @@
     ]
   },
   "resources/js/CourseDetails.jsx": {
-    "file": "assets/CourseDetails-Caw2u9VH.js",
+    "file": "assets/CourseDetails-ClulgWq_.js",
     "name": "CourseDetails",
     "src": "resources/js/CourseDetails.jsx",
     "isEntry": true,
@@ -12889,7 +12934,7 @@
     ]
   },
   "resources/js/Courses.jsx": {
-    "file": "assets/Courses-M-CziiTo.js",
+    "file": "assets/Courses-mLYL3FE1.js",
     "name": "Courses",
     "src": "resources/js/Courses.jsx",
     "isEntry": true,
@@ -12984,7 +13029,7 @@
     "isEntry": true
   },
   "resources/js/Home.jsx": {
-    "file": "assets/Home-CCh0oqBm.js",
+    "file": "assets/Home-D-p36BvE.js",
     "name": "Home",
     "src": "resources/js/Home.jsx",
     "isEntry": true,
@@ -13189,7 +13234,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-BpLS1B4f.js",
+    "file": "assets/System-6hbjrNoy.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13318,7 +13363,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-kG3C4Jzm.js",
+    "file": "assets/ServiceBuilder-THRUlqe1.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,
