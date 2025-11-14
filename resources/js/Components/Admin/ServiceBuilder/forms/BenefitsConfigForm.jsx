@@ -6,7 +6,7 @@ import SelectFormGroup from '../../../../Components/Adminto/form/SelectFormGroup
 import { 
     CheckCircle, Shield, Zap, Award, Globe, Lock, Clock, Star, 
     Heart, TrendingUp, Truck, Package, Users, DollarSign, 
-    ThumbsUp, Gift, Sparkles, Target
+    ThumbsUp, Gift, Sparkles, Target, Building2, Warehouse,Camera,NotebookPen
 } from 'lucide-react';
 
 // Available icons for benefits
@@ -28,7 +28,11 @@ const AVAILABLE_ICONS = {
     ThumbsUp,
     Gift,
     Sparkles,
-    Target
+    Target,
+    Building2,
+    Warehouse,
+    Camera,
+    NotebookPen
 };
 
 const ICON_LABELS = {
@@ -49,7 +53,11 @@ const ICON_LABELS = {
     ThumbsUp: 'Like',
     Gift: 'Regalo',
     Sparkles: 'Brillo',
-    Target: 'Objetivo'
+    Target: 'Objetivo',
+    Building2: 'Edificio',
+    Warehouse: 'Almacén',
+    Camera: 'Cámara',
+    NotebookPen: 'Lista'
 };
 
 const COLOR_MAP = {
@@ -100,15 +108,15 @@ const BenefitsConfigForm = ({ config, updateConfig }) => {
             
             updateConfig('benefits', benefits);
             
-            setTimeout(() => {
-                setEditingBenefit(null);
-                setNewBenefit({
-                    icon: 'CheckCircle',
-                    title: '',
-                    description: '',
-                    color: 'bg-primary'
-                });
-            }, 100);
+            // Limpiar inmediatamente el formulario
+           setNewBenefit({
+                icon: 'CheckCircle',
+                title: '',
+                description: '',
+                color: 'bg-primary'
+            });
+            setEditingBenefit(null);
+            
         } else {
             // Agregar nuevo beneficio
             const benefits = [...(config.benefits || []), {
@@ -131,21 +139,39 @@ const BenefitsConfigForm = ({ config, updateConfig }) => {
     const handleEditBenefit = (index) => {
         const benefit = config.benefits[index];
         
-        // Actualizar directamente sin resetear
-        setNewBenefit({
-            icon: benefit.icon || 'CheckCircle',
-            title: benefit.title || '',
-            description: benefit.description || '',
-            color: benefit.color || 'bg-primary'
-        });
-        setEditingBenefit(index);
+        // Cancelar cualquier edición previa primero
+        setEditingBenefit(null);
         
-        // Scroll hacia el formulario
+        // Limpiar completamente el formulario
+        setNewBenefit({
+            icon: 'CheckCircle',
+            title: '',
+            description: '',
+            color: 'bg-primary'
+        });
+        
+        // Forzar re-render esperando 2 ciclos de React
         setTimeout(() => {
-            const formElement = document.querySelector('.card.bg-light');
-            if (formElement) {
-                formElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
+            // Cargar los valores del beneficio seleccionado
+            setNewBenefit({
+                icon: benefit.icon || 'CheckCircle',
+                title: benefit.title || '',
+                description: benefit.description || '',
+                color: benefit.color || 'bg-primary'
+            });
+            
+            // Activar modo edición
+            setTimeout(() => {
+                setEditingBenefit(index);
+                
+                // Scroll hacia el formulario
+                setTimeout(() => {
+                    const formElement = document.querySelector('.card.bg-light');
+                    if (formElement) {
+                        formElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }, 50);
+            }, 10);
         }, 100);
     };
 
@@ -387,6 +413,10 @@ const BenefitsConfigForm = ({ config, updateConfig }) => {
                                     <option value="Gift">Regalo</option>
                                     <option value="Sparkles">Brillo</option>
                                     <option value="Target">Objetivo</option>
+                                    <option value="Building2">Edificio</option>
+                                    <option value="Warehouse">Almacén</option>
+                                    <option value="Camera">Cámara</option>
+                                    <option value="NotebookPen">Lista</option>
                                 </SelectFormGroup>
                             </div>
                             <div className="col-md-3">

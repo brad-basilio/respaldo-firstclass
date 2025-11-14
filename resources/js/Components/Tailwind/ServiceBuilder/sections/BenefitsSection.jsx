@@ -2,7 +2,7 @@ import React from 'react';
 import { 
     Shield, Clock, Globe, Star, Truck, Award, CheckCircle, Heart,
     Zap, Lock, TrendingUp, Package, Users, DollarSign, ThumbsUp,
-    Gift, Sparkles, Target
+    Gift, Sparkles, Target, Building2, Warehouse, Camera, NotebookPen
 } from 'lucide-react';
 
 const iconMap = {
@@ -23,7 +23,11 @@ const iconMap = {
     'ThumbsUp': ThumbsUp,
     'Gift': Gift,
     'Sparkles': Sparkles,
-    'Target': Target
+    'Target': Target,
+    'Building2': Building2,
+    'Warehouse': Warehouse,
+    'Camera': Camera,
+    'NotebookPen': NotebookPen
 };
 
 const COLOR_MAP = {

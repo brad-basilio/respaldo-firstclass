@@ -1400,13 +1400,6 @@
     "file": "assets/thumbs-l0sNRNKZ.js",
     "name": "thumbs"
   },
-  "_thumbs-up-Bci7-pED.js": {
-    "file": "assets/thumbs-up-Bci7-pED.js",
-    "name": "thumbs-up",
-    "imports": [
-      "_createLucideIcon-DfjclApS.js"
-    ]
-  },
   "_tippy-react.esm-DmkRJDEW.js": {
     "file": "assets/tippy-react.esm-DmkRJDEW.js",
     "name": "tippy-react.esm",
@@ -1518,6 +1511,13 @@
   "_users-w-WaEtvX.js": {
     "file": "assets/users-w-WaEtvX.js",
     "name": "users",
+    "imports": [
+      "_createLucideIcon-DfjclApS.js"
+    ]
+  },
+  "_warehouse-BjMF9qa9.js": {
+    "file": "assets/warehouse-BjMF9qa9.js",
+    "name": "warehouse",
     "imports": [
       "_createLucideIcon-DfjclApS.js"
     ]
@@ -3235,7 +3235,7 @@
     ]
   },
   "resources/js/Admin/ServiceSections.jsx": {
-    "file": "assets/ServiceSections-D-y9M3Ot.js",
+    "file": "assets/ServiceSections-BrVvjFZg.js",
     "name": "ServiceSections",
     "src": "resources/js/Admin/ServiceSections.jsx",
     "isEntry": true,
@@ -3261,7 +3261,8 @@
       "_plane-BVBhfl5p.js",
       "_package-DBFPPBi1.js",
       "_user-BZB1h7Cv.js",
-      "_thumbs-up-Bci7-pED.js",
+      "_warehouse-BjMF9qa9.js",
+      "_building-2-DSFvhCB-.js",
       "_sparkles-DvmvZ6mJ.js",
       "_gift-DxfEgpn1.js",
       "_dollar-sign-XFMLoV_L.js",
@@ -11858,7 +11859,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-CtOdlkKW.js",
+    "file": "assets/ServiceBuilder-CyOuXrNQ.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Components/Tailwind/ServiceBuilder.jsx",
     "isDynamicEntry": true,
@@ -11874,7 +11875,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx": {
-    "file": "assets/SectionRenderer-BtfEyltY.js",
+    "file": "assets/SectionRenderer-glOkkZIh.js",
     "name": "SectionRenderer",
     "src": "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx",
     "isDynamicEntry": true,
@@ -13271,7 +13272,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-Ddmjfndz.js",
+    "file": "assets/System-DuwN2Xli.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13400,7 +13401,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-B-GHhBWZ.js",
+    "file": "assets/ServiceBuilder-DJfNL-y_.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,

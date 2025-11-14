@@ -93,7 +93,7 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
        
         {
             type: 'benefits',
-            name: 'Beneficios',
+            name: 'Beneficios / Características',
             icon: 'mdi mdi-check-circle',
             color: 'bg-purple-500',
             description: 'Grid de beneficios o características',
