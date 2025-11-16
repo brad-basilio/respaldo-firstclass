@@ -27,20 +27,7 @@ const iconMap = {
     'Building2': Building2,
     'Warehouse': Warehouse,
     'Camera': Camera,
-    'NotebookPen': NotebookPen
-};
-
-const COLOR_MAP = {
-    'bg-primary': '#06b6d4',
-    'bg-secondary': '#3b82f6',
-    'bg-neutral-dark': '#1f2937',
-    'bg-neutral-light': '#6b7280',
-    'bg-green-500': '#22c55e',
-    'bg-orange-500': '#f97316',
-    'bg-purple-500': '#a855f7',
-    'bg-red-500': '#ef4444',
-    'bg-yellow-500': '#eab308',
-    'bg-pink-500': '#ec4899'
+    NotebookPen
 };
 
 const BenefitsSection = ({ config }) => {
@@ -127,7 +114,6 @@ const BenefitsSection = ({ config }) => {
                 <div className={`grid grid-cols-1 ${gridCols} gap-8`}>
                     {benefits.map((benefit, index) => {
                         const IconComponent = iconMap[benefit.icon] || CheckCircle;
-                        const iconBgColor = COLOR_MAP[benefit.color] || COLOR_MAP['bg-primary'];
 
                         return (
                             <div
@@ -152,10 +138,7 @@ const BenefitsSection = ({ config }) => {
                                         {/* Icon */}
                                         <div className="mb-6">
                                             <div 
-                                                className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
-                                                style={{ 
-                                                    backgroundColor: iconBgColor
-                                                }}
+                                                className={`w-16 h-16 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${benefit.color || 'bg-primary'}`}
                                             >
                                                 <IconComponent 
                                                     className="h-8 w-8 text-white transform group-hover:scale-110 transition-transform duration-500" 

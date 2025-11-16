@@ -11960,7 +11960,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-DaBTQq29.js",
+    "file": "assets/ServiceBuilder-DbIaxZ29.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Components/Tailwind/ServiceBuilder.jsx",
     "isDynamicEntry": true,
@@ -11976,7 +11976,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx": {
-    "file": "assets/SectionRenderer-C8WbsaJd.js",
+    "file": "assets/SectionRenderer-0_4t_OmY.js",
     "name": "SectionRenderer",
     "src": "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx",
     "isDynamicEntry": true,
@@ -13375,7 +13375,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-Bw8EHvaG.js",
+    "file": "assets/System-CgMQxcZM.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13504,7 +13504,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-B7Pu5VFq.js",
+    "file": "assets/ServiceBuilder-B70zSn6K.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,
