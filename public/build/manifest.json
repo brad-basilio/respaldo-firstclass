@@ -3249,7 +3249,7 @@
     ]
   },
   "resources/js/Admin/ServiceSections.jsx": {
-    "file": "assets/ServiceSections-Ce4uuJaH.js",
+    "file": "assets/ServiceSections-CQkWjMXg.js",
     "name": "ServiceSections",
     "src": "resources/js/Admin/ServiceSections.jsx",
     "isEntry": true,
@@ -11857,6 +11857,38 @@
       "_General-apRuNwp7.js"
     ]
   },
+  "resources/js/Components/Tailwind/Sections/CtaSection.jsx": {
+    "file": "assets/CtaSection-W-WFLW27.js",
+    "name": "CtaSection",
+    "src": "resources/js/Components/Tailwind/Sections/CtaSection.jsx",
+    "isEntry": true,
+    "imports": [
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "resources/js/Components/Tailwind/FirstClass/CasilleroVirtual.jsx",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js",
+      "_index-pSueRYGM.js",
+      "_index-B6ujFmsw.js",
+      "_LockerRequestsRest-DN2k928D.js",
+      "_BasicRest-BML1C-ua.js",
+      "_main-B6F2O9-U.js",
+      "____vite-browser-external_commonjs-proxy-DDYoOVPM.js",
+      "resources/js/Components/Tailwind/Products/Components/CardProductKatya.jsx",
+      "_BooleanLimit-D-OsQsek.js",
+      "_index-BZvh78jk.js",
+      "_proxy-B0QLMKEh.js",
+      "_circle-check-big-CYWUGR3Z.js",
+      "_createLucideIcon-DfjclApS.js",
+      "_x-fof_H3Vv.js",
+      "_user-BZB1h7Cv.js",
+      "_mail-drJGpT4k.js",
+      "_phone-ZNY-sPqk.js",
+      "_credit-card-MgdEzS7h.js",
+      "_map-pin-Cj3PUWlD.js",
+      "_message-square-3fUfiy2J.js"
+    ]
+  },
   "resources/js/Components/Tailwind/Sections/HowItWorksSection.jsx": {
     "file": "assets/HowItWorksSection-DurbFAsd.js",
     "name": "HowItWorksSection",
@@ -11928,7 +11960,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-B37vFqCi.js",
+    "file": "assets/ServiceBuilder-DaBTQq29.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Components/Tailwind/ServiceBuilder.jsx",
     "isDynamicEntry": true,
@@ -11944,7 +11976,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx": {
-    "file": "assets/SectionRenderer-Z1eJbWHo.js",
+    "file": "assets/SectionRenderer-C8WbsaJd.js",
     "name": "SectionRenderer",
     "src": "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx",
     "isDynamicEntry": true,
@@ -11964,7 +11996,7 @@
       "resources/js/Components/Tailwind/Sections/PartnersSection.jsx",
       "resources/js/Components/Tailwind/Sections/RequirementsSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/FaqSection.jsx",
-      "resources/js/Components/Tailwind/ServiceBuilder/sections/CtaSection.jsx",
+      "resources/js/Components/Tailwind/Sections/CtaSection.jsx",
       "resources/js/Components/Tailwind/FirstClass/BrandsCarousel.jsx",
       "resources/js/Components/Tailwind/FirstClass/AdvisorButton.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/TestimonialsSection.jsx"
@@ -13343,7 +13375,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-BJwRvBRu.js",
+    "file": "assets/System-Bw8EHvaG.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13472,7 +13504,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-BnmS8lOh.js",
+    "file": "assets/ServiceBuilder-B7Pu5VFq.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,

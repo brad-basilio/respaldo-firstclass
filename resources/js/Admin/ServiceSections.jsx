@@ -175,15 +175,15 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             name: 'Call to Action',
             icon: 'mdi mdi-bullhorn',
             color: 'bg-red-500',
-            description: 'Llamado a la acción con botones',
+            description: 'Llamado a la acción con botones (Asesor/Casillero)',
             defaultConfig: {
-                title: 'Comienza hoy mismo',
-                description: 'Regístrate y obtén beneficios',
+                style: 'simple',
+                title: '¿Tienes dudas sobre los requisitos?',
+                description: 'Nuestros asesores especializados te ayudarán a verificar que tu envío cumpla con todas las normativas aduaneras de Perú.',
                 buttons: [
-                    { text: 'Registrarse', link: '#', style: 'primary' }
-                ],
-                background: 'primary',
-                show_contact_info: false,
+                    { type: 'advisor', text: 'Consultar con asesor', show: true },
+                    { type: 'locker', text: 'Abrir mi casillero gratis', show: false }
+                ]
             }
         },
         {
