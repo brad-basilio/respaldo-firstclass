@@ -1570,7 +1570,7 @@
     "isEntry": true
   },
   "resources/js/About.jsx": {
-    "file": "assets/About-BOctebuN.js",
+    "file": "assets/About-CKhAETUO.js",
     "name": "About",
     "src": "resources/js/About.jsx",
     "isEntry": true,
@@ -3913,7 +3913,7 @@
     ]
   },
   "resources/js/Blog.jsx": {
-    "file": "assets/Blog-DOb9-X78.js",
+    "file": "assets/Blog-C_z3jVwX.js",
     "name": "Blog",
     "src": "resources/js/Blog.jsx",
     "isEntry": true,
@@ -3958,7 +3958,7 @@
     ]
   },
   "resources/js/BlogArticle.jsx": {
-    "file": "assets/BlogArticle-B3sKfTy7.js",
+    "file": "assets/BlogArticle-D-U2F9t9.js",
     "name": "BlogArticle",
     "src": "resources/js/BlogArticle.jsx",
     "isEntry": true,
@@ -5850,7 +5850,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Base.jsx": {
-    "file": "assets/Base-DhmjM7Xr.js",
+    "file": "assets/Base-BnB-YIoO.js",
     "name": "Base",
     "src": "resources/js/Components/Tailwind/Base.jsx",
     "isDynamicEntry": true,
@@ -9284,7 +9284,7 @@
     ]
   },
   "resources/js/Components/Tailwind/Header.jsx": {
-    "file": "assets/Header-DNz5CpJu.js",
+    "file": "assets/Header-B2LnxKUy.js",
     "name": "Header",
     "src": "resources/js/Components/Tailwind/Header.jsx",
     "isEntry": true,
@@ -12994,7 +12994,7 @@
     ]
   },
   "resources/js/Contact.jsx": {
-    "file": "assets/Contact-C9d5LO0M.js",
+    "file": "assets/Contact-BNc-vDyO.js",
     "name": "Contact",
     "src": "resources/js/Contact.jsx",
     "isEntry": true,
@@ -13039,7 +13039,7 @@
     ]
   },
   "resources/js/CourseDetails.jsx": {
-    "file": "assets/CourseDetails-ClulgWq_.js",
+    "file": "assets/CourseDetails-DOWhvyDw.js",
     "name": "CourseDetails",
     "src": "resources/js/CourseDetails.jsx",
     "isEntry": true,
@@ -13075,7 +13075,7 @@
     ]
   },
   "resources/js/Courses.jsx": {
-    "file": "assets/Courses-mLYL3FE1.js",
+    "file": "assets/Courses-BRNJtMJv.js",
     "name": "Courses",
     "src": "resources/js/Courses.jsx",
     "isEntry": true,
@@ -13170,7 +13170,7 @@
     "isEntry": true
   },
   "resources/js/Home.jsx": {
-    "file": "assets/Home-D-p36BvE.js",
+    "file": "assets/Home-C40twZoF.js",
     "name": "Home",
     "src": "resources/js/Home.jsx",
     "isEntry": true,
@@ -13375,7 +13375,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-CgMQxcZM.js",
+    "file": "assets/System-OK2_4x1T.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13504,7 +13504,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-B70zSn6K.js",
+    "file": "assets/ServiceBuilder-BCKpcn7k.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,

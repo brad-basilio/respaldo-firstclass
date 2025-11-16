@@ -117,9 +117,9 @@ const HeaderFirstClass = ({
         setIsMegaMenuOpen(false);
     };
 
-    const handleMenuItemClick = (path) => {
-        if (path !== "#") {
-            window.location.href = path;
+    const handleMenuItemClick = (slug) => {
+        if (slug !== "#") {
+            window.location.href = `/servicio/${slug}`;
         }
         setIsMenuOpen(false);
         setIsMegaMenuOpen(false);
@@ -266,7 +266,7 @@ const HeaderFirstClass = ({
                                                             key={service.id}
                                                         >
                                                             <button
-                                                                onClick={() => handleMenuItemClick(service.path)}
+                                                                onClick={() => handleMenuItemClick(service.slug)}
                                                                 className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-primary/5 transition-all duration-200 border border-transparent hover:border-primary/20 w-full text-left"
                                                             >
                                                                 {service.image ? (
