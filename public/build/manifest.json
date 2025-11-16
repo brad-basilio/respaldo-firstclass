@@ -1280,6 +1280,20 @@
       "_createLucideIcon-DfjclApS.js"
     ]
   },
+  "_scale-OBEMUw--.js": {
+    "file": "assets/scale-OBEMUw--.js",
+    "name": "scale",
+    "imports": [
+      "_createLucideIcon-DfjclApS.js"
+    ]
+  },
+  "_scissors-D5CNuAGz.js": {
+    "file": "assets/scissors-D5CNuAGz.js",
+    "name": "scissors",
+    "imports": [
+      "_createLucideIcon-DfjclApS.js"
+    ]
+  },
   "_search-BQ59Robe.js": {
     "file": "assets/search-BQ59Robe.js",
     "name": "search",
@@ -3235,7 +3249,7 @@
     ]
   },
   "resources/js/Admin/ServiceSections.jsx": {
-    "file": "assets/ServiceSections-BuO5ITn9.js",
+    "file": "assets/ServiceSections-Ce4uuJaH.js",
     "name": "ServiceSections",
     "src": "resources/js/Admin/ServiceSections.jsx",
     "isEntry": true,
@@ -3273,6 +3287,11 @@
       "_clock-BLXQcN-l.js",
       "_award-M5cUojD6.js",
       "_zap-CK_S2upX.js",
+      "_scissors-D5CNuAGz.js",
+      "_scale-OBEMUw--.js",
+      "_info-U8866tPJ.js",
+      "_circle-alert-DSZas2nP.js",
+      "_file-text-BGNfKLm5.js",
       "_Modal-xDw9ufjg.js",
       "_objectWithoutPropertiesLoose-CoVnHxV7.js",
       "_redux-_GL-VrQv.js",
@@ -4124,6 +4143,20 @@
       "_index-BOnQTV8N.js",
       "_index-yBjzXJbu.js",
       "__commonjsHelpers-D6-XlEtG.js"
+    ]
+  },
+  "resources/js/Components/Admin/ServiceBuilder/forms/RequirementsConfigForm.jsx": {
+    "file": "assets/RequirementsConfigForm-C0yqsJPt.js",
+    "name": "RequirementsConfigForm",
+    "src": "resources/js/Components/Admin/ServiceBuilder/forms/RequirementsConfigForm.jsx",
+    "isEntry": true,
+    "imports": [
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "resources/js/Utils/ReactAppend.jsx",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js",
+      "_index-B6ujFmsw.js"
     ]
   },
   "resources/js/Components/Admin/ServiceBuilder/forms/StepsConfigForm.jsx": {
@@ -8523,7 +8556,7 @@
     ]
   },
   "resources/js/Components/Tailwind/FirstClass.jsx": {
-    "file": "assets/FirstClass-6SyVHKOV.js",
+    "file": "assets/FirstClass-jiwDZQXJ.js",
     "name": "FirstClass",
     "src": "resources/js/Components/Tailwind/FirstClass.jsx",
     "isDynamicEntry": true,
@@ -11863,6 +11896,18 @@
       "__commonjsHelpers-D6-XlEtG.js"
     ]
   },
+  "resources/js/Components/Tailwind/Sections/RequirementsSection.jsx": {
+    "file": "assets/RequirementsSection--pJTheE3.js",
+    "name": "RequirementsSection",
+    "src": "resources/js/Components/Tailwind/Sections/RequirementsSection.jsx",
+    "isEntry": true,
+    "imports": [
+      "resources/js/Components/Tailwind/AboutUs/AboutSimple.jsx",
+      "_index-BOnQTV8N.js",
+      "_index-yBjzXJbu.js",
+      "__commonjsHelpers-D6-XlEtG.js"
+    ]
+  },
   "resources/js/Components/Tailwind/Service.jsx": {
     "file": "assets/Service-BsSmbXDO.js",
     "name": "Service",
@@ -11883,7 +11928,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-DDiIHTtN.js",
+    "file": "assets/ServiceBuilder-B37vFqCi.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Components/Tailwind/ServiceBuilder.jsx",
     "isDynamicEntry": true,
@@ -11899,7 +11944,7 @@
     ]
   },
   "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx": {
-    "file": "assets/SectionRenderer-C6-6m4BX.js",
+    "file": "assets/SectionRenderer-Z1eJbWHo.js",
     "name": "SectionRenderer",
     "src": "resources/js/Components/Tailwind/ServiceBuilder/SectionRenderer.jsx",
     "isDynamicEntry": true,
@@ -11917,6 +11962,7 @@
       "resources/js/Components/Tailwind/ServiceBuilder/sections/StepsSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/BenefitsSection.jsx",
       "resources/js/Components/Tailwind/Sections/PartnersSection.jsx",
+      "resources/js/Components/Tailwind/Sections/RequirementsSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/FaqSection.jsx",
       "resources/js/Components/Tailwind/ServiceBuilder/sections/CtaSection.jsx",
       "resources/js/Components/Tailwind/FirstClass/BrandsCarousel.jsx",
@@ -13297,7 +13343,7 @@
     ]
   },
   "resources/js/System.jsx": {
-    "file": "assets/System-Dgj6k7nu.js",
+    "file": "assets/System-BJwRvBRu.js",
     "name": "System",
     "src": "resources/js/System.jsx",
     "isEntry": true,
@@ -13426,7 +13472,7 @@
     ]
   },
   "resources/js/Tailwind/ServiceBuilder.jsx": {
-    "file": "assets/ServiceBuilder-D8--Dnyb.js",
+    "file": "assets/ServiceBuilder-BnmS8lOh.js",
     "name": "ServiceBuilder",
     "src": "resources/js/Tailwind/ServiceBuilder.jsx",
     "isEntry": true,

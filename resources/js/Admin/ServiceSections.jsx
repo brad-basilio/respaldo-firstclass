@@ -110,6 +110,24 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             }
         },
         {
+            type: 'requirements',
+            name: 'Requisitos / Normativas',
+            icon: 'mdi mdi-file-document-outline',
+            color: 'bg-orange-500',
+            description: 'Requisitos, condiciones o normativas a cumplir',
+            defaultConfig: {
+                title: 'Requisitos por envío que debes cumplir',
+                subtitle: 'Según norma de aduana',
+                requirements: [
+                    { icon: 'FileText', title: 'Factura comercial', description: 'Documento que acredite el valor de la mercancía', color: 'bg-primary', limit: '', isSpecial: false },
+                    { icon: 'Scale', title: 'Peso máximo', description: 'El peso máximo permitido por paquete es de 70 kilogramos', color: 'bg-secondary', limit: '70 kg', isSpecial: false },
+                    { icon: 'Box', title: 'Embalaje seguro', description: 'Los productos deben estar correctamente empaquetados', color: 'bg-neutral-dark', limit: '', isSpecial: false },
+                ],
+                columns: 3,
+                background: 'white',
+            }
+        },
+        {
             type: 'partners',
             name: 'Partners / Tiendas',
             icon: 'mdi mdi-store',

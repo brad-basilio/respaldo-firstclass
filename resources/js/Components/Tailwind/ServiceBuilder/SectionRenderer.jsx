@@ -8,6 +8,7 @@ const sectionComponents = {
     'steps': lazy(() => import('./sections/StepsSection')),
     'benefits': lazy(() => import('./sections/BenefitsSection')),
     'partners': lazy(() => import('../Sections/PartnersSection')),
+    'requirements': lazy(() => import('../Sections/RequirementsSection')),
     'faq': lazy(() => import('./sections/FaqSection')),
     'cta': lazy(() => import('./sections/CtaSection')),
     'brands': lazy(() => import('../FirstClass/BrandsCarousel')),
