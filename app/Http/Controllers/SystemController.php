@@ -306,6 +306,12 @@ class SystemController extends BasicController
         ->orderBy('id')
         ->get();
 
+        // Load FAQs - SIN FILTRO para debug
+        $faqs = Faq::all();
+        
+        // DEBUG: Verificar que FAQs se carguen
+        logger()->info('FAQs cargadas:', ['count' => $faqs->count(), 'faqs' => $faqs->toArray()]);
+
         // Set react view to ServiceBuilder
         $this->reactView = 'Tailwind/ServiceBuilder';
         $this->reactRootView = 'public';
@@ -318,6 +324,7 @@ class SystemController extends BasicController
             'colors' => $colors,
             'fonts' => $fonts,
             'serviceCategories' => $serviceCategories,
+            'faqs' => $faqs,
         ];
         
         // Data for blade view (SEO, meta tags, etc)

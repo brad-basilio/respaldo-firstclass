@@ -227,15 +227,13 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             name: 'Preguntas Frecuentes',
             icon: 'mdi mdi-help-circle',
             color: 'bg-indigo-500',
-            description: 'Acordeón de preguntas y respuestas',
+            description: 'Acordeón de preguntas y respuestas (desde BD)',
             defaultConfig: {
-                title: 'Preguntas Frecuentes',
-                subtitle: 'Dudas comunes',
-                faqs: [
-                    { question: '¿Pregunta 1?', answer: 'Respuesta aquí' },
-                    { question: '¿Pregunta 2?', answer: 'Respuesta aquí' },
-                ],
-                columns: 1,
+                title: 'Preguntas *Frecuentes*',
+                subtitle: 'Soporte',
+                description: 'Encuentra respuestas rápidas a las preguntas más comunes sobre nuestros servicios',
+                background: 'white',
+                showSearch: true
             }
         },
         {

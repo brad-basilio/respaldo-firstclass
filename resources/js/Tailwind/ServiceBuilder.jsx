@@ -19,8 +19,8 @@ const LoadingFallback = () => (
     </div>
 );
 
-const ServiceBuilder = ({ service, generals, systems, fonts, colors, serviceCategories = [] }) => {
-    console.log('ServiceBuilder loaded', { service, generals, systems, fonts, colors, serviceCategories });
+const ServiceBuilder = ({ service, generals, systems, fonts, colors, serviceCategories = [], faqs = [] }) => {
+    console.log('ServiceBuilder loaded', { service, generals, systems, fonts, colors, serviceCategories, faqs });
     
     return (
         <>
@@ -72,6 +72,7 @@ const ServiceBuilder = ({ service, generals, systems, fonts, colors, serviceCate
                     generals={generals}
                     contacts={generals}
                     pages={[]}
+                    faqs={faqs}
                 />
 
                 {/* Footer */}
