@@ -2,9 +2,10 @@ import React, { lazy, Suspense } from 'react';
 
 const SectionRenderer = lazy(() => import('./ServiceBuilder/SectionRenderer'));
 
-const ServiceBuilder = ({ which, data, items = [], service: serviceProp, generals, contacts, pages, faqs = [] }) => {
+const ServiceBuilder = ({ which, data, items = [], service: serviceProp, generals, contacts, pages, faqs = [], testimonials = [] }) => {
     console.log('ServiceBuilder - FAQs prop:', faqs);
-    console.log('ServiceBuilder - Todas las props:', { which, data, items, service: serviceProp, generals, contacts, pages, faqs });
+    console.log('ServiceBuilder - Testimonials prop:', testimonials);
+    console.log('ServiceBuilder - Todas las props:', { which, data, items, service: serviceProp, generals, contacts, pages, faqs, testimonials });
     
     // Soportar tanto items[0] (antiguo) como service prop directo (nuevo)
     const service = serviceProp || items[0];
@@ -55,6 +56,7 @@ const ServiceBuilder = ({ which, data, items = [], service: serviceProp, general
                         contacts={contacts}
                         pages={pages}
                         faqs={faqs}
+                        testimonials={testimonials}
                         index={index}
                     />
                 </Suspense>

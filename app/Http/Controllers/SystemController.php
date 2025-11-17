@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\Setting;
 use App\Models\System;
 use App\Models\SystemColor;
+use App\Models\Testimony;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use SoDe\Extend\Crypto;
@@ -309,8 +310,15 @@ class SystemController extends BasicController
         // Load FAQs - SIN FILTRO para debug
         $faqs = Faq::all();
         
+        // Load Testimonios
+        $testimonials = Testimony::where('visible', true)
+            ->where('status', true)
+            ->orderBy('updated_at', 'desc')
+            ->get();
+        
         // DEBUG: Verificar que FAQs se carguen
         logger()->info('FAQs cargadas:', ['count' => $faqs->count(), 'faqs' => $faqs->toArray()]);
+        logger()->info('Testimonials cargados:', ['count' => $testimonials->count()]);
 
         // Set react view to ServiceBuilder
         $this->reactView = 'Tailwind/ServiceBuilder';
@@ -325,6 +333,7 @@ class SystemController extends BasicController
             'fonts' => $fonts,
             'serviceCategories' => $serviceCategories,
             'faqs' => $faqs,
+            'testimonials' => $testimonials,
         ];
         
         // Data for blade view (SEO, meta tags, etc)

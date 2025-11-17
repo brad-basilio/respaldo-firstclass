@@ -257,19 +257,13 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             name: 'Testimonios',
             icon: 'mdi mdi-comment-quote',
             color: 'bg-pink-500',
-            description: 'Testimonios de clientes',
+            description: 'Testimonios de clientes (desde BD)',
             defaultConfig: {
-                title: 'Lo que dicen nuestros clientes',
+                title: 'Lo que dicen nuestros *clientes*',
                 subtitle: 'Testimonios',
-                testimonials: [
-                    {
-                        name: 'Cliente',
-                        text: 'Excelente servicio',
-                        rating: 5,
-                        position: 'Cargo',
-                    }
-                ],
+                description: 'Conoce las experiencias de nuestros clientes satisfechos',
                 columns: 3,
+                background: 'white',
             }
         },
     ];

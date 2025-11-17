@@ -17,7 +17,7 @@ const sectionComponents = {
     'testimonials': lazy(() => import('./sections/TestimonialsSection')),
 };
 
-const SectionRenderer = ({ section, service, generals, contacts, pages, faqs = [], index }) => {
+const SectionRenderer = ({ section, service, generals, contacts, pages, faqs = [], testimonials = [], index }) => {
     const Component = sectionComponents[section.section_type];
 
     if (!Component) {
@@ -59,6 +59,7 @@ const SectionRenderer = ({ section, service, generals, contacts, pages, faqs = [
                 contacts={contacts}
                 pages={pages}
                 faqs={faqs}
+                testimonials={testimonials}
                 sectionName={section.section_name}
             />
         </section>
