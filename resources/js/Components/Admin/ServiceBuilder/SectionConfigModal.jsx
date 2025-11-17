@@ -13,6 +13,7 @@ import RequirementsConfigForm from './forms/RequirementsConfigForm';
 import FaqConfigForm from './forms/FaqConfigForm';
 import CtaConfigForm from './forms/CtaConfigForm';
 import CalculatorConfigForm from './forms/CalculatorConfigForm';
+import CategoryCardsConfigForm from './forms/CategoryCardsConfigForm';
 import TestimonialsConfigForm from './forms/TestimonialsConfigForm';
 import Modal from '../../Adminto/Modal';
 import InputFormGroup from '../../Adminto/form/InputFormGroup';
@@ -142,6 +143,8 @@ const SectionConfigModal = ({ show, onHide, section, onSave }) => {
                 return <CtaConfigForm {...commonProps} />;
             case 'calculator':
                 return <CalculatorConfigForm {...commonProps} />;
+            case 'categorycards':
+                return <CategoryCardsConfigForm {...commonProps} />;
             case 'testimonials':
                 return <TestimonialsConfigForm {...commonProps} />;
             default:

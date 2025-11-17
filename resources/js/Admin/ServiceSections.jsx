@@ -148,10 +148,78 @@ const ServiceSections = ({ service_id, service_name, service_slug }) => {
             icon: 'mdi mdi-calculator',
             color: 'bg-yellow-500',
             description: 'Calculadora de tarifas interactiva',
+            generals: [
+                'importation_flete',
+                'importation_servicio',
+                'importation_seguro',
+                'importation_derecho_arancelario',
+                'importation_flete_descripcion',
+                'importation_seguro_descripcion',
+                'importation_derecho_arancelario_descripcion'
+            ],
             defaultConfig: {
-                title: 'Calcula tu envío',
-                description: 'Ingresa los datos de tu paquete',
-                calculator_type: 'shipping_rate',
+                title: 'Calcula tu *envío*',
+                subtitle: 'Usa nuestra calculadora para estimar el costo de tu envío',
+                description: '',
+                pasos: [
+                    { numero: 1, titulo: "Pesa tu Paquete", descripcion: "Calcula el peso real o volumétrico en kilogramos", icon: "Scale" },
+                    { numero: 2, titulo: "Calcula el Flete", descripcion: "Multiplica el peso por tarifa USD por kg", icon: "Calculator" },
+                    { numero: 3, titulo: "Suma Cargos Fijos", descripcion: "Agrega servicio por envío", icon: "DollarSign" },
+                    { numero: 4, titulo: "Total a Pagar", descripcion: "Obtén el costo total de tu envío", icon: "CheckCircle" }
+                ],
+                showBreakdown: true,
+                showSteps: true,
+                bgColor: 'bg-accent'
+            }
+        },
+        {
+            type: 'categorycards',
+            name: 'Categorías con Cards',
+            icon: 'mdi mdi-view-grid',
+            color: 'bg-cyan-500',
+            description: 'Categorías con items (estilo Requisitos/Prohibida)',
+            defaultConfig: {
+                title: 'Requisitos por *Valor de Envío*',
+                subtitle: 'Según norma de aduana',
+                description: 'Cumple con los requisitos según el valor de tu envío',
+                categories: [
+                    {
+                        categoria: 'Envíos hasta $200 USD',
+                        iconName: 'Package',
+                        color: 'bg-primary',
+                        requisitos: [
+                            'Valor máximo: $200 USD FOB',
+                            'Peso máximo: 50 kg',
+                            'Solo artículos de uso personal',
+                            'Documentación simplificada'
+                        ]
+                    },
+                    {
+                        categoria: 'Envíos de $200 a $2000 USD',
+                        iconName: 'FileText',
+                        color: 'bg-secondary',
+                        requisitos: [
+                            'Valor: $200 - $2000 USD FOB',
+                            'Requiere factura comercial',
+                            'RUC activo obligatorio',
+                            'Declaración aduanera detallada'
+                        ]
+                    },
+                    {
+                        categoria: 'Envíos superiores a $2000 USD',
+                        iconName: 'AlertTriangle',
+                        color: 'bg-neutral-dark',
+                        requisitos: [
+                            'Cambio de modalidad necesario',
+                            'Importación formal requerida',
+                            'Agente de aduanas obligatorio',
+                            'Proceso completo de desaduanaje'
+                        ]
+                    }
+                ],
+                columns: 3,
+                background: 'white',
+                cardStyle: 'gradient'
             }
         },
         {

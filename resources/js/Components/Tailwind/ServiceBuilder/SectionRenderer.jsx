@@ -5,6 +5,7 @@ const sectionComponents = {
     'hero': lazy(() => import('./sections/HeroSection')),
     'howitworks': lazy(() => import('../Sections/HowItWorksSection')),
     'calculator': lazy(() => import('./sections/CalculatorSection')),
+    'categorycards': lazy(() => import('./sections/CategoryCardsSection')),
     'steps': lazy(() => import('./sections/StepsSection')),
     'benefits': lazy(() => import('./sections/BenefitsSection')),
     'partners': lazy(() => import('../Sections/PartnersSection')),
