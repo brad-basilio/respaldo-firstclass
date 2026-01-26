@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Menu, X, ChevronDown, User, Building, HelpCircle, MapPin, Globe, Truck, DollarSign, MessageCircle, FileText, UserCircle, LogIn, Plane } from 'lucide-react';
+import { Menu, X, ChevronDown, User, Building, HelpCircle, MapPin, Globe, Truck, DollarSign, MessageCircle, FileText, UserCircle, LogIn, Plane, Parentheses } from 'lucide-react';
 import Global from '../../../Utils/Global';
 import LockerButton from '../FirstClass/LockerButton';
 
@@ -28,7 +28,7 @@ const HeaderFirstClass = ({
     const addressObj = generals.find(
         (item) => item.correlative === "address"
     );
-    
+
     const phoneWhatsapp = phoneWhatsappObj?.description ?? null;
     const messageWhatsapp = messageWhatsappObj?.description ?? null;
     const address = addressObj?.description ?? null;
@@ -64,7 +64,7 @@ const HeaderFirstClass = ({
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
-                megaMenuRef.current && 
+                megaMenuRef.current &&
                 !megaMenuRef.current.contains(event.target) &&
                 servicesButtonRef.current &&
                 !servicesButtonRef.current.contains(event.target)
@@ -91,7 +91,7 @@ const HeaderFirstClass = ({
         document.addEventListener('mousedown', handleClickOutside);
         document.addEventListener('keydown', handleEscape);
         window.addEventListener('scroll', handleScroll);
-        
+
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
             document.removeEventListener('keydown', handleEscape);
@@ -117,9 +117,15 @@ const HeaderFirstClass = ({
         setIsMegaMenuOpen(false);
     };
 
-    const handleMenuItemClick = (slug) => {
-        if (slug !== "#") {
-            window.location.href = `/servicio/${slug}`;
+    const handleMenuItemClick = (service) => {
+        if (service?.path) {
+            window.location.href = service?.path;
+            setIsMenuOpen(false);
+            setIsMegaMenuOpen(false);
+            return;
+        }
+        else if (service?.slug !== "#") {
+            window.location.href = `/servicio/${service?.slug}`;
         }
         setIsMenuOpen(false);
         setIsMegaMenuOpen(false);
@@ -129,69 +135,69 @@ const HeaderFirstClass = ({
         <>
             {/* Backdrop overlay for mega menu */}
             {isMegaMenuOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-all duration-300"
-                    style={{ top: '80px' }} 
+                    style={{ top: '80px' }}
                 />
             )}
-                          
+
             {/* Main Header */}
             <header className={`w-full top-0 left-0 z-50 transition-all duration-300  ${isFixed ? "fixed  shadow-lg" : "relative "} ${data?.class || "bg-white"}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 lg:h-20">
-                        
+
                         {/* Logo */}
                         <a href="/" className="flex items-center gap-2 z-[51]">
-                        <img
-                            src={`/assets/resources/logo.png?v=${crypto.randomUUID()}`}
-                            alt={Global.APP_NAME}
-                            className={`h-14 object-contain object-center ${data?.class_logo || ""}`}
-                            onError={(e) => {
-                                e.target.onerror = null;
-                                e.target.src = "/assets/img/logo-bk.svg";
-                            }}
-                        />
-                    </a>
+                            <img
+                                src={`/assets/resources/logo.png?v=${crypto.randomUUID()}`}
+                                alt={Global.APP_NAME}
+                                className={`h-14 object-contain object-center ${data?.class_logo || ""}`}
+                                onError={(e) => {
+                                    e.target.onerror = null;
+                                    e.target.src = "/assets/img/logo-bk.svg";
+                                }}
+                            />
+                        </a>
 
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center space-x-8">
                             {/* Servicios con Mega Menu - Solo si hay servicios */}
-                           
-                                <div 
-                                    className="relative"
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
+
+                            <div
+                                className="relative"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <button
+                                    ref={servicesButtonRef}
+                                    onClick={handleServicesClick}
+                                    className="flex items-center customtext-primary hover:text-secondary transition-colors duration-200 py-2 font-medium cursor-pointer group"
+                                    aria-expanded={isMegaMenuOpen}
+                                    aria-haspopup="true"
                                 >
-                                    <button
-                                        ref={servicesButtonRef}
-                                        onClick={handleServicesClick}
-                                        className="flex items-center customtext-primary hover:text-secondary transition-colors duration-200 py-2 font-medium cursor-pointer group"
-                                        aria-expanded={isMegaMenuOpen}
-                                        aria-haspopup="true"
-                                    >
-                                        Servicios
-                                        <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 group-hover:text-secondary ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
-                                    </button>
-                                </div>
-                        
+                                    Servicios
+                                    <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 group-hover:text-secondary ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                            </div>
+
                             {/* Menu principal */}
-                            <a 
-                                href="/blog" 
+                            <a
+                                href="/blog"
                                 className="text-gray-700 hover:customtext-primary transition-colors duration-200 font-medium relative group"
                             >
                                 Blog
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </a>
-                            <a 
-                                href="/contacto" 
+                            <a
+                                href="/contacto"
                                 className="text-gray-700 hover:customtext-primary transition-colors duration-200 font-medium relative group"
                             >
                                 Contacto
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </a>
-                            <a 
-                            hidden
-                                href="#" 
+                            <a
+                                hidden
+                                href="#"
                                 className="text-gray-700 hover:customtext-primary transition-colors duration-200 font-medium relative group"
                             >
                                 Rastrea
@@ -200,7 +206,7 @@ const HeaderFirstClass = ({
                         </nav>
 
                         {/* Account Section */}
-                        <div  className="flex items-center space-x-4 " >
+                        <div className="flex items-center space-x-4 " >
                             {/* Account Buttons - Desktop */}
                             <div className=" lg:flex items-center space-x-3">
                                 <button className="!hidden flex items-center text-gray-700 hover:customtext-primary transition-all duration-200 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 group">
@@ -239,21 +245,21 @@ const HeaderFirstClass = ({
                                     {items.filter(cat => cat.services && cat.services.length > 0).map((category, sectionIndex) => {
                                         const SectionIcon = getIconForCategory(category.slug);
                                         return (
-                                            <div 
-                                                key={category.id} 
+                                            <div
+                                                key={category.id}
                                                 className="space-y-4"
                                             >
                                                 <div className="flex items-center space-x-2 pb-3 border-b-2 border-primary/20">
                                                     {category.image ? (
-                                                        <img 
-                                                            src={`/storage/images/service_category/${category.image}`} 
+                                                        <img
+                                                            src={`/storage/images/service_category/${category.image}`}
                                                             alt={category.name}
                                                             className="h-5 w-5 object-contain"
                                                             onError={(e) => e.target.src = "/api/cover/thumbnail/null"}
                                                         />
                                                     ) : (
-                                                        <SectionIcon 
-                                                            className="h-5 w-5 customtext-primary" 
+                                                        <SectionIcon
+                                                            className="h-5 w-5 customtext-primary"
                                                         />
                                                     )}
                                                     <h3 className="text-lg font-bold text-gray-900">
@@ -262,15 +268,15 @@ const HeaderFirstClass = ({
                                                 </div>
                                                 <ul className="space-y-3">
                                                     {category.services.filter(s => s.visible && s.status).map((service, itemIndex) => (
-                                                        <li 
+                                                        <li
                                                             key={service.id}
                                                         >
                                                             <button
-                                                                onClick={() => handleMenuItemClick(service.slug)}
+                                                                onClick={() => handleMenuItemClick(service)}
                                                                 className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-primary/5 transition-all duration-200 border border-transparent hover:border-primary/20 w-full text-left"
                                                             >
                                                                 {service.image ? (
-                                                                    <img 
+                                                                    <img
                                                                         src={`/storage/images/service/${service.image}`}
                                                                         alt={service.name}
                                                                         className="h-5 w-5 mt-0.5 object-contain group-hover:scale-110 transition-transform duration-200"
@@ -297,9 +303,9 @@ const HeaderFirstClass = ({
                                         );
                                     })}
                                 </div>
-                                
+
                                 {/* Call to Action Section */}
-                                <div  className="mt-8 pt-6 border-t border-gray-200">
+                                <div className="mt-8 pt-6 border-t border-gray-200">
                                     <div className="bg-primary rounded-xl p-6 text-white">
                                         <div className="flex flex-col md:flex-row items-center justify-between">
                                             <div className="mb-4 md:mb-0">
@@ -307,7 +313,7 @@ const HeaderFirstClass = ({
                                                 <p className="text-sm opacity-90">Regístrate gratis y obtén tu casillero virtual en Miami</p>
                                             </div>
                                             <div className="flex space-x-3">
-                                                <button 
+                                                <button
                                                     onClick={() => handleMenuItemClick('/casillero-virtual')}
                                                     className="bg-white customtext-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
                                                 >
@@ -335,8 +341,8 @@ const HeaderFirstClass = ({
                                         <div key={category.id} className="space-y-2">
                                             <div className="text-sm font-bold customtext-primary px-2 flex items-center">
                                                 {category.image ? (
-                                                    <img 
-                                                        src={`/storage/images/service_category/${category.image}`} 
+                                                    <img
+                                                        src={`/storage/images/service_category/${category.image}`}
                                                         alt={category.name}
                                                         className="h-4 w-4 mr-2 object-contain"
                                                         onError={(e) => e.target.src = "/api/cover/thumbnail/null"}
@@ -347,9 +353,9 @@ const HeaderFirstClass = ({
                                                 {index + 1}. {category.name}
                                             </div>
                                             {category.services.filter(s => s.visible && s.status).map((service) => (
-                                                <button 
+                                                <button
                                                     key={service.id}
-                                                    onClick={() => handleMenuItemClick(service.path)}
+                                                    onClick={() => handleMenuItemClick(service)}
                                                     className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:customtext-primary hover:bg-gray-50 rounded transition-colors duration-200"
                                                 >
                                                     {service.name}
@@ -361,26 +367,26 @@ const HeaderFirstClass = ({
 
                                 {/* Other navigation items */}
                                 <div className="border-t pt-4 space-y-2">
-                                    <button 
+                                    <button
                                         onClick={() => handleMenuItemClick('/blogs')}
                                         className="block w-full text-left px-2 py-2 text-gray-700 hover:customtext-primary transition-colors duration-200"
                                     >
                                         Blog
                                     </button>
-                                    <button 
+                                    <button
                                         onClick={() => handleMenuItemClick('/contacto')}
                                         className="block w-full text-left px-2 py-2 text-gray-700 hover:customtext-primary transition-colors duration-200"
                                     >
                                         Contacto
                                     </button>
-                                    <button 
-                                    hidden
+                                    <button
+                                        hidden
                                         onClick={() => handleMenuItemClick('#')}
                                         className="block w-full text-left px-2 py-2 text-gray-700 hover:customtext-primary transition-colors duration-200"
                                     >
                                         Rastrea
                                     </button>
-                                    
+
                                     {/* Account buttons mobile */}
                                     <div className="border-t pt-4 space-y-2" hidden>
                                         <a href="/mi-cuenta" className="w-full flex items-center justify-center text-gray-700 hover:customtext-primary transition-colors duration-200 font-medium px-3 py-2 rounded-lg hover:bg-gray-50">

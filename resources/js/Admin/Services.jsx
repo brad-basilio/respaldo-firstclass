@@ -480,7 +480,7 @@ const Services = ({ service_categories = [], service_sub_categories = [] }) => {
                                         />
                                     </div>
                                 )}
-                                {Fillable.has('services', 'background_image') && (
+                                {Fillable.has('services', 'path') && (
                                     <div className="mb-3">
                                         <InputFormGroup
                                             eRef={pathRef}
